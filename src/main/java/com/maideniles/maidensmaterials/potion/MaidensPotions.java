@@ -1,8 +1,7 @@
 package com.maideniles.maidensmaterials.potion;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
-import init.ItemInit;
-import init.ModItems;
+
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -35,8 +34,8 @@ public class MaidensPotions {
 
 
     public static void addPotionRecipes() {
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE,  ItemInit.FLORAL_ESSENCE.get(), FLORAL_FORTUNE_POTION.get()));
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE, ItemInit.EARTHEN_ESSENCE.get(), GATHERERS_GLEE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE,  init.ItemInit.FLORAL_ESSENCE.get(), FLORAL_FORTUNE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE, init.ItemInit.EARTHEN_ESSENCE.get(), GATHERERS_GLEE_POTION.get()));
 
     }
 
