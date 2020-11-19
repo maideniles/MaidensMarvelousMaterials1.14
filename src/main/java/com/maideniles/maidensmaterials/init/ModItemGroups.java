@@ -1,4 +1,5 @@
-package init;
+
+package com.maideniles.maidensmaterials.init;
 
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;

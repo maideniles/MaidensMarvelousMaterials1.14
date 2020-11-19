@@ -1,8 +1,9 @@
 package com.maideniles.maidensmaterials.block.vase;
 
 
-import init.ModBlocks;
-import init.ModItems;
+import com.maideniles.maidensmaterials.init.ModBlocks;
+import com.maideniles.maidensmaterials.init.ModItems;
+import com.maideniles.maidensmaterials.init.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;

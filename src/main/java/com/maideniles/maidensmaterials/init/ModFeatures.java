@@ -1,4 +1,4 @@
-package init;
+package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
 import com.maideniles.maidensmaterials.world.feature.tree.CrabappleTreeFeature;

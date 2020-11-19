@@ -1,7 +1,7 @@
 package com.maideniles.maidensmaterials.world.biome;
 
 
-import init.ModBlocks;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
 

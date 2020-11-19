@@ -1,8 +1,8 @@
 package com.maideniles.maidensmaterials.block.leaves;
 
-import init.ItemInit;
-import init.ModBlocks;
-import init.ModItems;
+
+import com.maideniles.maidensmaterials.init.ItemInit;
+import com.maideniles.maidensmaterials.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;

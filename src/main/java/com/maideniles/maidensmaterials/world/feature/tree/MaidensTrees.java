@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials.world.feature.tree;
+import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.util.MaidensTreeColor;
-import init.ModBlocks;
+
 import net.minecraft.block.trees.Tree;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;

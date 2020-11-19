@@ -1,4 +1,4 @@
-package init;
+package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.enchant.EnchantmentFloralFeet;
 import com.maideniles.maidensmaterials.enchant.EnchantmentFlowerChild;

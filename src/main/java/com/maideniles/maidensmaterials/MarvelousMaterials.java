@@ -2,7 +2,7 @@ package com.maideniles.maidensmaterials;
 
 
 import com.maideniles.maidensmaterials.potion.MaidensPotions;
-import init.ItemInit;
+import com.maideniles.maidensmaterials.init.ItemInit;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;

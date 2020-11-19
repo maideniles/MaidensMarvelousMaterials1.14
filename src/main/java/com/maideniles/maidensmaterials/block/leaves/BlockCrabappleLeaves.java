@@ -1,5 +1,8 @@
 package com.maideniles.maidensmaterials.block.leaves;
 
+import com.maideniles.maidensmaterials.init.ItemInit;
+import com.maideniles.maidensmaterials.init.ModItems;
+
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,10 +33,10 @@ public class BlockCrabappleLeaves extends LeavesBlock {
 
         if (!worldIn.isRemote()) {
 
-            if (shears.getItem() == init.ModItems.PRUNING_SHEARS) {
+            if (shears.getItem() == ModItems.PRUNING_SHEARS) {
 
 
-                ItemEntity blossom = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(init.ModItems.CRABAPPLE_BLOSSOMS, 1));
+                ItemEntity blossom = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.CRABAPPLE_BLOSSOMS, 1));
                 worldIn.addEntity(blossom);
 
 
@@ -44,7 +47,7 @@ public class BlockCrabappleLeaves extends LeavesBlock {
 
 
                 if ((new Random().nextInt(100) + 1) < 10) {
-                    ItemEntity itemessence = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(init.ItemInit.FLORAL_ESSENCE.get(), 1));
+                    ItemEntity itemessence = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.FLORAL_ESSENCE.get(), 1));
                     itemessence.setPickupDelay(0);
                     worldIn.addEntity(itemessence);
                 }

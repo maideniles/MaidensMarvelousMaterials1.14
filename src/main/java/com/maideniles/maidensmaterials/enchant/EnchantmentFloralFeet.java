@@ -2,8 +2,9 @@ package com.maideniles.maidensmaterials.enchant;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
 import com.maideniles.maidensmaterials.block.BlockFlowerGrass;
-import init.ModBlocks;
-import init.ModEnchantments;
+import com.maideniles.maidensmaterials.init.ModBlocks;
+import com.maideniles.maidensmaterials.init.ModEnchantments;
+import com.maideniles.maidensmaterials.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowingFluidBlock;

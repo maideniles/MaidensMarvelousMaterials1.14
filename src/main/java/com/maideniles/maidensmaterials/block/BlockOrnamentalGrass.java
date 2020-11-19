@@ -1,7 +1,8 @@
 package com.maideniles.maidensmaterials.block;
 
-import init.ModBlocks;
-import init.ModEnchantments;
+
+import com.maideniles.maidensmaterials.init.ModBlocks;
+import com.maideniles.maidensmaterials.init.ModEnchantments;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;

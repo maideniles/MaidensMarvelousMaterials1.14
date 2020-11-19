@@ -1,4 +1,4 @@
-package init;
+package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.world.biome.BiomeOrnamentalForest;
 import net.minecraft.world.biome.Biome;

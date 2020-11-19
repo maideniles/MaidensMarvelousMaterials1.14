@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials.block;
 
-import init.ModBlocks;
+
+import com.maideniles.maidensmaterials.init.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.BlockRenderLayer;

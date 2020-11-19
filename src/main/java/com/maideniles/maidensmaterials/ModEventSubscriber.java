@@ -1,7 +1,7 @@
 package com.maideniles.maidensmaterials;
 
 import com.google.common.base.Preconditions;
-import init.ModItemGroups;
+
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;

@@ -1,11 +1,12 @@
 package com.maideniles.maidensmaterials.world.feature.tree;
 
+import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.mojang.datafixers.Dynamic;
 import java.util.Random;
 import java.util.Set;
 import java.util.function.Function;
 
-import init.ModBlocks;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CocoaBlock;
