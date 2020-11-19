@@ -61,55 +61,55 @@ public class BlockClayVaseLightGray extends Block {
 
 
 
-            if (blossom.getItem() == ModItems.CRABAPPLE_BLOSSOMS){
+            if (blossom.getItem() == ModItems.CRABAPPLE_BLOSSOMS.get()){
 
                 System.out.println("RED FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseRedFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.POINCIANA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.POINCIANA_BLOSSOMS.get()){
 
                 System.out.println("ORANGE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseOrangeFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.LABURNUM_BLOSSOMS){
+            if (blossom.getItem() == ModItems.LABURNUM_BLOSSOMS.get()){
 
                 System.out.println("YELLOW FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseYellowFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.JADE_BLOSSOMS){
+            if (blossom.getItem() == ModItems.JADE_BLOSSOMS.get()){
 
                 System.out.println("GREEN FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseGreenFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.PAULOWNIA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.PAULOWNIA_BLOSSOMS.get()){
 
                 System.out.println("CYAN FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseCyanFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.WISTERIA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.WISTERIA_BLOSSOMS.get()){
 
                 System.out.println("BLUE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseBlueFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.JACARANDA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.JACARANDA_BLOSSOMS.get()){
 
                 System.out.println("PURPLE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVasePurpleFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.DOGWOOD_BLOSSOMS){
+            if (blossom.getItem() == ModItems.DOGWOOD_BLOSSOMS.get()){
 
                 System.out.println("PINK FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVasePinkFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.SILVERBELL_BLOSSOMS){
+            if (blossom.getItem() == ModItems.SILVERBELL_BLOSSOMS.get()){
 
                 System.out.println("WHITE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.lightGrayVaseWhiteFlower.getDefaultState());

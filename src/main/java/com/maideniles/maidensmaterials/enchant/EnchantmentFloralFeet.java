@@ -106,7 +106,7 @@ public class EnchantmentFloralFeet extends Enchantment{
                             if(world.getBlockState(entity.getPosition()).getBlock() != Blocks.SNOW) {
                                 if(ModBlocks.walkFlowers.isValidPosition(iblockstate, world, pos)) {
                                     world.setBlockState(pos, ModBlocks.walkFlowers.getDefaultState());
-                                    System.out.println("GROW FLOWERS!");
+                                   //Debug System.out.println("GROW FLOWERS!");
                                 }
                             }
                         }

@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials;
 
 
+import com.maideniles.maidensmaterials.init.ModItems;
 import com.maideniles.maidensmaterials.potion.MaidensPotions;
 import com.maideniles.maidensmaterials.init.ItemInit;
 import net.minecraft.potion.Potion;
@@ -23,7 +24,7 @@ public final class MarvelousMaterials {
         MaidensPotions.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
        MaidensPotions.POTIONS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
-        ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
     }
 

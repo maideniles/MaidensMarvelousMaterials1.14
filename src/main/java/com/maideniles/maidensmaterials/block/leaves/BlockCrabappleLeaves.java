@@ -33,10 +33,10 @@ public class BlockCrabappleLeaves extends LeavesBlock {
 
         if (!worldIn.isRemote()) {
 
-            if (shears.getItem() == ModItems.PRUNING_SHEARS) {
+            if (shears.getItem() == ModItems.PRUNING_SHEARS.get()) {
 
 
-                ItemEntity blossom = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.CRABAPPLE_BLOSSOMS, 1));
+                ItemEntity blossom = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.CRABAPPLE_BLOSSOMS.get(), 1));
                 worldIn.addEntity(blossom);
 
 
@@ -47,7 +47,7 @@ public class BlockCrabappleLeaves extends LeavesBlock {
 
 
                 if ((new Random().nextInt(100) + 1) < 10) {
-                    ItemEntity itemessence = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.FLORAL_ESSENCE.get(), 1));
+                    ItemEntity itemessence = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.FLORAL_ESSENCE.get(), 1));
                     itemessence.setPickupDelay(0);
                     worldIn.addEntity(itemessence);
                 }

@@ -61,55 +61,55 @@ public class BlockClayVaseMagenta extends Block {
 
 
 
-            if (blossom.getItem() == ModItems.CRABAPPLE_BLOSSOMS){
+            if (blossom.getItem() == ModItems.CRABAPPLE_BLOSSOMS.get()){
 
                 System.out.println("RED FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseRedFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.POINCIANA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.POINCIANA_BLOSSOMS.get()){
 
                 System.out.println("ORANGE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseOrangeFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.LABURNUM_BLOSSOMS){
+            if (blossom.getItem() == ModItems.LABURNUM_BLOSSOMS.get()){
 
                 System.out.println("YELLOW FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseYellowFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.JADE_BLOSSOMS){
+            if (blossom.getItem() == ModItems.JADE_BLOSSOMS.get()){
 
                 System.out.println("GREEN FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseGreenFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.PAULOWNIA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.PAULOWNIA_BLOSSOMS.get()){
 
                 System.out.println("CYAN FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseCyanFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.WISTERIA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.WISTERIA_BLOSSOMS.get()){
 
                 System.out.println("BLUE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseBlueFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.JACARANDA_BLOSSOMS){
+            if (blossom.getItem() == ModItems.JACARANDA_BLOSSOMS.get()){
 
                 System.out.println("PURPLE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVasePurpleFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.DOGWOOD_BLOSSOMS){
+            if (blossom.getItem() == ModItems.DOGWOOD_BLOSSOMS.get()){
 
                 System.out.println("PINK FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVasePinkFlower.getDefaultState());
             }
 
-            if (blossom.getItem() == ModItems.SILVERBELL_BLOSSOMS){
+            if (blossom.getItem() == ModItems.SILVERBELL_BLOSSOMS.get()){
 
                 System.out.println("WHITE FLOWER!");
                 worldIn.setBlockState(pos, ModBlocks.magentaVaseWhiteFlower.getDefaultState());
