@@ -79,7 +79,7 @@ import net.minecraftforge.fml.common.Mod;
 
             if (ModBlocks.GRASS.contains(event.getState().getBlock())) {
                 ItemEntity item = new ItemEntity((World) event.getWorld(), event.getPos().getX(), event.getPos().getY(),
-                        event.getPos().getZ(), new ItemStack(Item.getItemFromBlock(ModBlocks.ornamentalGrass), 1));
+                        event.getPos().getZ(), new ItemStack(Item.getItemFromBlock(ModBlocks.ornamentalGrass.get()), 1));
 
                 if (!((World) event.getWorld()).isRemote) {
                     item.setPickupDelay(20); // To Set a Small Pickup Delay

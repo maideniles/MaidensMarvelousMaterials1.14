@@ -20,8 +20,8 @@ import java.util.Set;
 import java.util.function.Function;
 
 public class CrabappleTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
-    private static final BlockState TRUNK = ModBlocks.crabappleLog.getDefaultState();
-    private static final BlockState LEAF = ModBlocks.crabappleLeaves.getDefaultState();
+    private static final BlockState TRUNK = ModBlocks.crabappleLog.get().getDefaultState();
+    private static final BlockState LEAF = ModBlocks.crabappleLeaves.get().getDefaultState();
 
     public CrabappleTreeFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> p_i51425_1_) {
         super(p_i51425_1_, false);

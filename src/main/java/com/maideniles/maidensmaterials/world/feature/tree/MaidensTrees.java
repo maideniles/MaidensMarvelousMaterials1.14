@@ -23,42 +23,42 @@ public class MaidensTrees extends Tree {
         switch (color) {
             case RED:
 
-                 return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.crabappleLog.getDefaultState(), ModBlocks.crabappleLeaves.getDefaultState(), ModBlocks.crabappleVine.getDefaultState(), true)):
-                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.crabappleLog.getDefaultState(), ModBlocks.crabappleLeaves.getDefaultState()));
+                 return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.crabappleLog.get().getDefaultState(), ModBlocks.crabappleLeaves.get().getDefaultState(), ModBlocks.crabappleVine.get().getDefaultState(), true)):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.crabappleLog.get().getDefaultState(), ModBlocks.crabappleLeaves.get().getDefaultState()));
 
             case ORANGE:
 
-                return  (random.nextInt(3) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.poincianaLog.getDefaultState(), ModBlocks.poincianaLeaves.getDefaultState(), ModBlocks.poincianaVine.getDefaultState(), true)):
-                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.poincianaLog.getDefaultState(), ModBlocks.poincianaLeaves.getDefaultState()));
+                return  (random.nextInt(3) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.poincianaLog.get().getDefaultState(), ModBlocks.poincianaLeaves.get().getDefaultState(), ModBlocks.poincianaVine.get().getDefaultState(), true)):
+                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.poincianaLog.get().getDefaultState(), ModBlocks.poincianaLeaves.get().getDefaultState()));
 
-            case YELLOW: return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.laburnumLog.getDefaultState(), ModBlocks.laburnumLeaves.getDefaultState(), ModBlocks.laburnumVine.getDefaultState(), true)):
-                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.laburnumLog.getDefaultState(), ModBlocks.laburnumLeaves.getDefaultState()));
+            case YELLOW: return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.laburnumLog.get().getDefaultState(), ModBlocks.laburnumLeaves.get().getDefaultState(), ModBlocks.laburnumVine.get().getDefaultState(), true)):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.laburnumLog.get().getDefaultState(), ModBlocks.laburnumLeaves.get().getDefaultState()));
 
             case GREEN:
 
-                return  (random.nextInt(5) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jadeLog.getDefaultState(), ModBlocks.jadeLeaves.getDefaultState(), ModBlocks.jadeVine.getDefaultState(), true)):
-                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jadeLog.getDefaultState(), ModBlocks.jadeLeaves.getDefaultState()));
+                return  (random.nextInt(5) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jadeLog.get().getDefaultState(), ModBlocks.jadeLeaves.get().getDefaultState(), ModBlocks.jadeVine.get().getDefaultState(), true)):
+                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jadeLog.get().getDefaultState(), ModBlocks.jadeLeaves.get().getDefaultState()));
 
-            case TEAL: return  (random.nextInt(5) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.paulowniaLog.getDefaultState(), ModBlocks.paulowniaLeaves.getDefaultState(), ModBlocks.paulowniaVine.getDefaultState(), true)):
-                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.paulowniaLog.getDefaultState(), ModBlocks.paulowniaLeaves.getDefaultState()));
+            case TEAL: return  (random.nextInt(5) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.paulowniaLog.get().getDefaultState(), ModBlocks.paulowniaLeaves.get().getDefaultState(), ModBlocks.paulowniaVine.get().getDefaultState(), true)):
+                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.paulowniaLog.get().getDefaultState(), ModBlocks.paulowniaLeaves.get().getDefaultState()));
 
 
-            case BLUE: return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.wisteriaLog.getDefaultState(), ModBlocks.wisteriaLeaves.getDefaultState(), ModBlocks.wisteriaVine.getDefaultState(), true)):
-                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.wisteriaLog.getDefaultState(), ModBlocks.wisteriaLeaves.getDefaultState()));
+            case BLUE: return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.wisteriaLog.get().getDefaultState(), ModBlocks.wisteriaLeaves.get().getDefaultState(), ModBlocks.wisteriaVine.get().getDefaultState(), true)):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.wisteriaLog.get().getDefaultState(), ModBlocks.wisteriaLeaves.get().getDefaultState()));
 
 
             case PURPLE:
 
-                return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jacarandaLog.getDefaultState(), ModBlocks.jacarandaLeaves.getDefaultState(), ModBlocks.jacarandaVine.getDefaultState(), true)):
-                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jacarandaLog.getDefaultState(), ModBlocks.jacarandaLeaves.getDefaultState()));
+                return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jacarandaLog.get().getDefaultState(), ModBlocks.jacarandaLeaves.get().getDefaultState(), ModBlocks.jacarandaVine.get().getDefaultState(), true)):
+                        new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jacarandaLog.get().getDefaultState(), ModBlocks.jacarandaLeaves.get().getDefaultState()));
 
 
-            case PINK:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.dogwoodLog.getDefaultState(), ModBlocks.dogwoodLeaves.getDefaultState(), ModBlocks.dogwoodVine.getDefaultState(), true)):
-                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.dogwoodLog.getDefaultState(), ModBlocks.dogwoodLeaves.getDefaultState()));
+            case PINK:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.dogwoodLog.get().getDefaultState(), ModBlocks.dogwoodLeaves.get().getDefaultState(), ModBlocks.dogwoodVine.get().getDefaultState(), true)):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.dogwoodLog.get().getDefaultState(), ModBlocks.dogwoodLeaves.get().getDefaultState()));
 
 
-            case WHITE:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.silverbellLog.getDefaultState(), ModBlocks.silverbellLeaves.getDefaultState(), ModBlocks.silverbellVine.getDefaultState(), true)):
-                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.silverbellLog.getDefaultState(), ModBlocks.silverbellLeaves.getDefaultState()));
+            case WHITE:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeatureVines(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.silverbellLog.get().getDefaultState(), ModBlocks.silverbellLeaves.get().getDefaultState(), ModBlocks.silverbellVine.get().getDefaultState(), true)):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.silverbellLog.get().getDefaultState(), ModBlocks.silverbellLeaves.get().getDefaultState()));
         }
 
         return getTreeFeature(random);

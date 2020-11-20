@@ -64,109 +64,109 @@ public class BlockClayVaseCyan extends Block {
             if (blossom.getItem() == ModItems.CRABAPPLE_BLOSSOMS.get()){
 
                 System.out.println("RED FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseRedFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseRedFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.POINCIANA_BLOSSOMS.get()){
 
                 System.out.println("ORANGE FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseOrangeFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseOrangeFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.LABURNUM_BLOSSOMS.get()){
 
                 System.out.println("YELLOW FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseYellowFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseYellowFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.JADE_BLOSSOMS.get()){
 
                 System.out.println("GREEN FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseGreenFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseGreenFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.PAULOWNIA_BLOSSOMS.get()){
 
                 System.out.println("CYAN FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseCyanFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseCyanFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.WISTERIA_BLOSSOMS.get()){
 
                 System.out.println("BLUE FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseBlueFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseBlueFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.JACARANDA_BLOSSOMS.get()){
 
                 System.out.println("PURPLE FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVasePurpleFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVasePurpleFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.DOGWOOD_BLOSSOMS.get()){
 
                 System.out.println("PINK FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVasePinkFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVasePinkFlower.get().getDefaultState());
             }
 
             if (blossom.getItem() == ModItems.SILVERBELL_BLOSSOMS.get()){
 
                 System.out.println("WHITE FLOWER!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseWhiteFlower.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseWhiteFlower.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.crabappleSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.crabappleSapling.get())){
 
                 System.out.println("RED SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseRedSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseRedSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.poincianaSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.poincianaSapling.get())){
 
                 System.out.println("ORANGE SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseOrangeSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseOrangeSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.laburnumSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.laburnumSapling.get())){
 
                 System.out.println("YELLOW SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseYellowSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseYellowSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.jadeSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.jadeSapling.get())){
 
                 System.out.println("GREEN SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseGreenSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseGreenSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.paulowniaSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.paulowniaSapling.get())){
 
                 System.out.println("CYAN SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseCyanSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseCyanSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.wisteriaSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.wisteriaSapling.get())){
 
                 System.out.println("BLUE SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseBlueSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseBlueSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.jacarandaSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.jacarandaSapling.get())){
 
                 System.out.println("PURPLE SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVasePurpleSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVasePurpleSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.dogwoodSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.dogwoodSapling.get())){
 
                 System.out.println("PINK SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVasePinkSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVasePinkSapling.get().getDefaultState());
             }
 
-            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.silverbellSapling)){
+            if (blossom.getItem() == Item.getItemFromBlock(ModBlocks.silverbellSapling.get())){
 
                 System.out.println("WHITE SAPLING!");
-                worldIn.setBlockState(pos, ModBlocks.cyanVaseWhiteSapling.getDefaultState());
+                worldIn.setBlockState(pos, ModBlocks.CyanVaseWhiteSapling.get().getDefaultState());
             }
 
         }

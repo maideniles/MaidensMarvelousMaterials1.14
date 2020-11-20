@@ -122,6 +122,6 @@ public class MaidensTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
     }
 
     private void placeCocoa(IWorldGenerationReader worldIn, int age, BlockPos pos, Direction side) {
-        this.setBlockState(worldIn, pos, ModBlocks.fairyGlowCup.getDefaultState().with(CocoaBlock.AGE, Integer.valueOf(age)).with(CocoaBlock.HORIZONTAL_FACING, side));
+        this.setBlockState(worldIn, pos, ModBlocks.fairyGlowCup.get().getDefaultState().with(CocoaBlock.AGE, Integer.valueOf(age)).with(CocoaBlock.HORIZONTAL_FACING, side));
     }
 }

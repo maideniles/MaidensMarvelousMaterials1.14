@@ -36,8 +36,8 @@ public class MaidensPotions {
 
 
     public static void addPotionRecipes() {
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE,  ModItems.FLORAL_ESSENCE.get(), FLORAL_FORTUNE_POTION.get()));
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE, ModItems.EARTHEN_ESSENCE.get(), GATHERERS_GLEE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,  ModItems.FLORAL_ESSENCE.get(), FLORAL_FORTUNE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER, ModItems.EARTHEN_ESSENCE.get(), GATHERERS_GLEE_POTION.get()));
 
     }
 
@@ -50,6 +50,8 @@ public class MaidensPotions {
             this.bottleInput = bottleInputIn;
             this.itemInput = itemInputIn;
             this.output = PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), outputIn);
+
+
         }
 
         // checks the item where the water bottle would go
@@ -69,6 +71,7 @@ public class MaidensPotions {
         public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
             if (isInput(input) && isIngredient(ingredient)) {
                 return this.output.copy();
+
             } else {
                 return ItemStack.EMPTY;
             }

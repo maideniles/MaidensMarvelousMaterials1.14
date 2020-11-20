@@ -64,7 +64,7 @@ public class BlockFlowerGrass extends BushBlock {
     }
 
     public void randomTick(BlockState state, World worldIn, BlockPos pos, Random random) {
-        if (state.getBlock() == ModBlocks.walkFlowers) {
+        if (state.getBlock() == ModBlocks.walkFlowers.get()) {
             worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
         }
 

@@ -1,27 +1,25 @@
 package com.maideniles.maidensmaterials.enchant;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
-import com.maideniles.maidensmaterials.block.BlockFlowerGrass;
+
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.init.ModEnchantments;
-import com.maideniles.maidensmaterials.init.ModItems;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.block.material.Material;
+
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
+
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.shapes.ISelectionContext;
+
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,6 +32,7 @@ public class EnchantmentFloralFeet extends Enchantment{
         super(Enchantment.Rarity.VERY_RARE, EnchantmentType.ARMOR_FEET, new EquipmentSlotType[] {EquipmentSlotType.FEET});
 
         this.setRegistryName("fancy_feet");
+        ModBlocks.GRASS.add(ModBlocks.ornamentalGrass.get());
     }
 
     @Override
@@ -104,8 +103,8 @@ public class EnchantmentFloralFeet extends Enchantment{
 
                                 || iblockstate.getBlock().toString().toLowerCase().contains("grass")){
                             if(world.getBlockState(entity.getPosition()).getBlock() != Blocks.SNOW) {
-                                if(ModBlocks.walkFlowers.isValidPosition(iblockstate, world, pos)) {
-                                    world.setBlockState(pos, ModBlocks.walkFlowers.getDefaultState());
+                                if(ModBlocks.walkFlowers.get().isValidPosition(iblockstate, world, pos)) {
+                                    world.setBlockState(pos, ModBlocks.walkFlowers.get().getDefaultState());
                                    //Debug System.out.println("GROW FLOWERS!");
                                 }
                             }

@@ -41,7 +41,7 @@ public class BlockOrnamentalGrass extends GrassBlock implements IGrowable {
                 player.getHeldItem(handIn));
         if (howextraisthis > 0) {
 
-            worldIn.setBlockState(pos, ModBlocks.ornamentalPath.getDefaultState());
+            worldIn.setBlockState(pos, ModBlocks.ornamentalPath.get().getDefaultState());
         }
 
         return true;
@@ -80,7 +80,7 @@ public class BlockOrnamentalGrass extends GrassBlock implements IGrowable {
 
                         if (iblockstate1.getBlock() instanceof SpreadableSnowyDirtBlock && worldIn.getNeighborAwareLightSubtracted(blockpos.up(),4) >= 4)
                         {
-                            worldIn.setBlockState(blockpos, ModBlocks.ornamentalGrass.getDefaultState());
+                            worldIn.setBlockState(blockpos, ModBlocks.ornamentalGrass.get().getDefaultState());
                         }
                     }
                 }
