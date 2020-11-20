@@ -36,8 +36,8 @@ public class MaidensPotions {
 
 
     public static void addPotionRecipes() {
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER,  ModItems.FLORAL_ESSENCE.get(), FLORAL_FORTUNE_POTION.get()));
-        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER, ModItems.EARTHEN_ESSENCE.get(), GATHERERS_GLEE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE,  ModItems.FLORAL_ESSENCE.get(), FLORAL_FORTUNE_POTION.get()));
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.MUNDANE, ModItems.EARTHEN_ESSENCE.get(), GATHERERS_GLEE_POTION.get()));
 
     }
 
