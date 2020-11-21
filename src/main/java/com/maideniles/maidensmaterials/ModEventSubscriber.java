@@ -1,7 +1,6 @@
 package com.maideniles.maidensmaterials;
 
 import com.maideniles.maidensmaterials.potion.MaidensPotions;
-import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +18,7 @@ public final class ModEventSubscriber {
     public static void onRegisterItems(RegistryEvent.Register<Potion> event) {
         MaidensPotions.addPotionRecipes();
     }
+
 }
 
 
