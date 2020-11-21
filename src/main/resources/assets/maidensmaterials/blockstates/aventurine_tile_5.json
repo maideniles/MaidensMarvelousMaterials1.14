@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "maidensmaterials:block/aventurine_tile_5" }
+        "": { "model": "maidensmaterials:block/aventurine_tile_5" }
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "maidensmaterials:block/labradorite_tile_3" }
+        "": { "model": "maidensmaterials:block/labradorite_tile_3" }
     }
 }

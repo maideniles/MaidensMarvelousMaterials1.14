@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "maidensmaterials:block/jasper_tile_5" }
+        "": { "model": "maidensmaterials:block/jasper_tile_5" }
     }
 }

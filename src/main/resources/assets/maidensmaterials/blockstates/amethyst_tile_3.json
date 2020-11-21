@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "maidensmaterials:block/amethyst_tile_3" }
+        "": { "model": "maidensmaterials:block/amethyst_tile_3" }
     }
 }

@@ -317,6 +317,10 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellSapling = createBlock("silverbell_sapling",
             () -> new CustomSaplingBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT), new MaidensTrees(MaidensTreeColor.WHITE)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> cedarSapling = createBlock("cedar_sapling",
+            () -> new CustomSaplingBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT), new MaidensTrees(MaidensTreeColor.CEDAR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
     //VINES
     public static final RegistryObject<Block>  crabappleVine = createBlock("crabapple_vine",
             () -> new
@@ -2261,7 +2265,7 @@ public class ModBlocks
 
     public static final RegistryObject<Block> brownStainedPressurePlate = createBlock(  "brown_stained_pressure_plate",
             () -> new CustomPressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING,Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
-
+/*
     //WALL--WOOD//
     public static final RegistryObject<Block> crabappleWall = createBlock("crabapple_wall",
             () -> new WallBlock(Block.Properties.from(Blocks.BRICK_WALL)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -2338,7 +2342,7 @@ public class ModBlocks
 
     public static final RegistryObject<Block> brownStainedWall = createBlock(  "brown_stained_wall",
             () -> new WallBlock(Block.Properties.from(Blocks.BRICK_WALL)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
-
+*/
     //DOOR1--WOOD//
     public static final RegistryObject<Block> crabappleDoor1 = createBlock("crabapple_door_1",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -4072,7 +4076,7 @@ public class ModBlocks
     public static final RegistryObject<Block> LightGrayVasePinkFlower = BLOCKS.register( "light_gray_vase_pink_flower",
             () -> new BlockClayVaseLightGray(BlockClayVaseLightGray.Properties.create(Material.CLAY).hardnessAndResistance(2.0F, 2.0F)));
 
-    public static final RegistryObject<Block> LightGrayVaseWhiteFlower = BLOCKS.register( "light_gray_vase_light_gray_flower",
+    public static final RegistryObject<Block> LightGrayVaseWhiteFlower = BLOCKS.register( "light_gray_vase_white_flower",
             () -> new BlockClayVaseLightGray(BlockClayVaseLightGray.Properties.create(Material.CLAY).hardnessAndResistance(2.0F, 2.0F)));
 
     public static final RegistryObject<Block> LightGrayVaseRedSapling = BLOCKS.register( "light_gray_vase_red_sapling",

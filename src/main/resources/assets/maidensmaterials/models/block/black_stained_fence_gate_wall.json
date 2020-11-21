@@ -1,5 +1,5 @@
 {
-    "parent": "block/template_template_fence_gate_wall",
+    "parent": "block/template_fence_gate_wall",
     "textures": {
         "texture": "maidensmaterials:block/black_stained_planks"
     }

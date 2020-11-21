@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "maidensmaterials:block/rose_quartz_tile_5" }
+        "": { "model": "maidensmaterials:block/rose_quartz_tile_5" }
     }
 }

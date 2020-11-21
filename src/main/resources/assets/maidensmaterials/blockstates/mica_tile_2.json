@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "maidensmaterials:block/mica_tile_2" }
+        "": { "model": "maidensmaterials:block/mica_tile_2" }
     }
 }
