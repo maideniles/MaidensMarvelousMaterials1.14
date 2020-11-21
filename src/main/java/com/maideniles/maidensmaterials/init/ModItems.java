@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.item.MortarNPestleItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.event.RegistryEvent;
@@ -243,7 +244,7 @@ public class ModItems {
 			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
 	public static final RegistryObject<Item>MORTAR_N_PESTLE = ITEMS.register("mortar_and_pestle",
-			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+			() -> new MortarNPestleItem(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(1)));
 
 
 	public static final RegistryObject<Item>GUIDE_BOOK = ITEMS.register("guide_book",

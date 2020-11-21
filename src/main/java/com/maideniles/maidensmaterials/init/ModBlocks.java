@@ -75,6 +75,9 @@ public class ModBlocks
     public static final RegistryObject<Block>   silverbellLog = createBlock("silverbell_log",
             () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> cedarLog = createBlock("cedar_log",
+            () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
     //LOGS--STRIPPED//
     public static final RegistryObject<Block>  crabappleStrippedLog = createBlock("crabapple_stripped_log",
             () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -101,6 +104,9 @@ public class ModBlocks
             () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   silverbellStrippedLog = createBlock("silverbell_stripped_log",
+            () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarStrippedLog = createBlock("cedar_stripped_log",
             () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //WOOD
@@ -131,6 +137,9 @@ public class ModBlocks
     public static final RegistryObject<Block>   silverbellWood = createBlock("silverbell_wood",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>  cedarWood = createBlock("cedar_wood",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
     //WOOD--STRIPPED//
     public static final RegistryObject<Block>  crabappleStrippedWood = createBlock("crabapple_stripped_wood",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -158,6 +167,10 @@ public class ModBlocks
 
     public static final RegistryObject<Block>   silverbellStrippedWood = createBlock("silverbell_stripped_wood",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>  cedarStrippedWood = createBlock("cedar_stripped_wood",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
     //LEAVES
     public static final RegistryObject<Block>  crabappleLeaves = createBlock("crabapple_leaves",
@@ -187,6 +200,10 @@ public class ModBlocks
     public static final RegistryObject<Block>   silverbellLeaves = createBlock("silverbell_leaves",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>   cedarLeaves = createBlock("cedar_leaves",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
     //PLANKS--TREES//
     public static final RegistryObject<Block>  crabapplePlanks = createBlock("crabapple_planks",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -214,6 +231,10 @@ public class ModBlocks
 
     public static final RegistryObject<Block>   silverbellPlanks = createBlock("silverbell_planks",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   cedarPlanks = createBlock("cedar_planks",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
 
 
@@ -481,6 +502,22 @@ public class ModBlocks
     public static final RegistryObject<Block> sodaliteBlock = createBlock(  "sodalite_block",
             () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5f, 15.0f).sound(SoundType.STONE)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+
+    public static final RegistryObject<Block> whiteWashedPlanks = createBlock(  "whitewashed_planks",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteWashedStairs = createBlock( "whitewashed_stairs",
+            () -> new StairsBlock(() -> ModBlocks.whiteWashedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteWashedSlab = createBlock("whitewashed_slab",
+            () ->new SlabBlock(Block.Properties.from(ModBlocks.whiteWashedPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteWashedFence = createBlock("whitewashed_fence",
+            () -> new FenceBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    public static final RegistryObject<Block> whiteWashedFenceGate = createBlock(  "whitewashed_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //GEM TILES--TILE 1//
     public static final RegistryObject<Block> amethystTile1 = createBlock(  "amethyst_tile_1",
@@ -898,7 +935,454 @@ public class ModBlocks
     public static final RegistryObject<Block> vineTie = createBlock( "vine_tie",
             () -> new BlockVineTie(Block.Properties.create(Material.WEB).doesNotBlockMovement().hardnessAndResistance(2.0F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    //STAIRS--WOOD--STAINED//
+    public static final RegistryObject<Block> crabappleStairs = createBlock( "crabapple_stairs",
+            () -> new StairsBlock(() -> ModBlocks.crabapplePlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> poincianaStairs = createBlock( "poinciana_stairs",
+            () -> new StairsBlock(() -> ModBlocks.poincianaPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> laburnumStairs = createBlock( "laburnum_stairs",
+            () -> new StairsBlock(() -> ModBlocks.laburnumPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeStairs = createBlock( "jade_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadePlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> paulowniaStairs = createBlock( "paulownia_stairs",
+            () -> new StairsBlock(() -> ModBlocks.paulowniaPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> wisteriaStairs = createBlock( "wisteria_stairs",
+            () -> new StairsBlock(() -> ModBlocks.wisteriaPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jacarandaStairs = createBlock( "jacaranda_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jacarandaPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dogwoodStairs = createBlock( "dogwood_stairs",
+            () -> new StairsBlock(() -> ModBlocks.dogwoodPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> silverbellStairs = createBlock( "silverbell_stairs",
+            () -> new StairsBlock(() -> ModBlocks.silverbellPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarStairs = createBlock( "cedar_stairs",
+            () -> new StairsBlock(() -> ModBlocks.cedarPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //STAIRS--WOOD--STAINED//
+    public static final RegistryObject<Block> redStainedStairs = createBlock( "red_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.redStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> orangeStainedStairs = createBlock( "orange_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.orangeStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> yellowStainedStairs = createBlock( "yellow_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.yellowStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> limeStainedStairs = createBlock( "lime_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.limeStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> greenStainedStairs = createBlock( "green_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.greenStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cyanStainedStairs = createBlock( "cyan_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.cyanStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightBlueStainedStairs = createBlock( "light_blue_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightBlueStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+    public static final RegistryObject<Block> blueStainedStairs = createBlock( "blue_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blueStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> purpleStainedStairs = createBlock( "purple_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.purpleStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> magentaStainedStairs = createBlock( "magenta_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.magentaStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> pinkStainedStairs = createBlock( "pink_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.pinkStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteStainedStairs = createBlock( "white_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.whiteStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightGrayStainedStairs = createBlock( "light_gray_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightGrayStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> grayStainedStairs = createBlock( "gray_stained_stairs" ,
+            () -> new StairsBlock(() -> ModBlocks.grayStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> blackStainedStairs = createBlock( "black_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blackStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> brownStainedStairs = createBlock( "brown_stained_stairs",
+            () -> new StairsBlock(() -> ModBlocks.brownStainedPlanks.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //STAIRS--CLAY//
+    public static final RegistryObject<Block> redClayStairs = createBlock( "red_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.redClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> orangeClayStairs = createBlock( "orange_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.orangeClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> yellowClayStairs = createBlock( "yellow_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.yellowClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> limeClayStairs = createBlock( "lime_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.limeClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> greenClayStairs = createBlock( "green_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.greenClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cyanClayStairs = createBlock( "cyan_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.cyanClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightBlueClayStairs = createBlock( "light_blue_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightBlueClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+    public static final RegistryObject<Block> blueClayStairs = createBlock( "blue_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blueClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> purpleClayStairs = createBlock( "purple_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.purpleClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> magentaClayStairs = createBlock( "magenta_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.magentaClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> pinkClayStairs = createBlock( "pink_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.pinkClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteClayStairs = createBlock( "white_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.whiteClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightGrayClayStairs = createBlock( "light_gray_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightGrayClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> grayClayStairs = createBlock( "gray_clay_stairs" ,
+            () -> new StairsBlock(() -> ModBlocks.grayClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> blackClayStairs = createBlock( "black_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blackClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> brownClayStairs = createBlock( "brown_clay_stairs",
+            () -> new StairsBlock(() -> ModBlocks.brownClayBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //STAIRS--BRICK//
+    public static final RegistryObject<Block> redBrickStairs = createBlock( "red_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.redBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> orangeBrickStairs = createBlock( "orange_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.orangeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> yellowBrickStairs = createBlock( "yellow_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.yellowBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> limeBrickStairs = createBlock( "lime_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.limeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> greenBrickStairs = createBlock( "green_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.greenBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cyanBrickStairs = createBlock( "cyan_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.cyanBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightBlueBrickStairs = createBlock( "light_blue_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightBlueBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+    public static final RegistryObject<Block> blueBrickStairs = createBlock( "blue_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blueBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> purpleBrickStairs = createBlock( "purple_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.purpleBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> magentaBrickStairs = createBlock( "magenta_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.magentaBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> pinkBrickStairs = createBlock( "pink_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.pinkBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteBrickStairs = createBlock( "white_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.whiteBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightGrayBrickStairs = createBlock( "light_gray_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightGrayBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> grayBrickStairs = createBlock( "gray_brick_stairs" ,
+            () -> new StairsBlock(() -> ModBlocks.grayBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> blackBrickStairs = createBlock( "black_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blackBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> brownBrickStairs = createBlock( "brown_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.brownBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+
+
+    //STAIRS--LARGE BRICK//
+    public static final RegistryObject<Block> redLargeBrickStairs = createBlock( "red_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.redLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> orangeLargeBrickStairs = createBlock( "orange_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.orangeLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> yellowLargeBrickStairs = createBlock( "yellow_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.yellowLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> limeLargeBrickStairs = createBlock( "lime_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.limeLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> greenLargeBrickStairs = createBlock( "green_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.greenLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cyanLargeBrickStairs = createBlock( "cyan_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.cyanLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightBlueLargeBrickStairs = createBlock( "light_blue_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightBlueLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+    public static final RegistryObject<Block> blueLargeBrickStairs = createBlock( "blue_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blueLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> purpleLargeBrickStairs = createBlock( "purple_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.purpleLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> magentaLargeBrickStairs = createBlock( "magenta_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.magentaLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> pinkLargeBrickStairs = createBlock( "pink_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.pinkLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> whiteLargeBrickStairs = createBlock( "white_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.whiteLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> lightGrayLargeBrickStairs = createBlock( "light_gray_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.lightGrayLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> grayLargeBrickStairs = createBlock( "gray_large_brick_stairs" ,
+            () -> new StairsBlock(() -> ModBlocks.grayLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> blackLargeBrickStairs = createBlock( "black_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.blackLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> brownLargeBrickStairs = createBlock( "brown_large_brick_stairs",
+            () -> new StairsBlock(() -> ModBlocks.brownLargeBrickBlock.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    //GEM STAIRS-- TILE 1//
+    public static final RegistryObject<Block> amethystTile1Stairs = createBlock( "amethyst_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.amethystTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> aventurineTile1Stairs = createBlock( "aventurine_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.aventurineTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> carnelianTile1Stairs = createBlock( "carnelian_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.carnelianTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> chalcopyriteTile1Stairs = createBlock( "chalcopyrite_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.chalcopyriteTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> citrineTile1Stairs = createBlock( "citrine_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.citrineTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeTile1Stairs = createBlock("jade_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadeTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jasperTile1Stairs = createBlock( "jasper_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jasperTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> labradoriteTile1Stairs = createBlock( "labradorite_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.labradoriteTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> micaTile1Stairs = createBlock( "mica_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.micaTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> moonstoneTile1Stairs = createBlock( "moonstone_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.moonstoneTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> roseQuartzTile1Stairs = createBlock( "rose_quartz_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.roseQuartzTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sodaliteTile1Stairs = createBlock( "sodalite_tile_1_stairs",
+            () -> new StairsBlock(() -> ModBlocks.sodaliteTile1.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GEM STAIRS-- TILE 2//
+    public static final RegistryObject<Block> amethystTile2Stairs = createBlock( "amethyst_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.amethystTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> aventurineTile2Stairs = createBlock( "aventurine_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.aventurineTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> carnelianTile2Stairs = createBlock( "carnelian_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.carnelianTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> chalcopyriteTile2Stairs = createBlock( "chalcopyrite_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.chalcopyriteTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> citrineTile2Stairs = createBlock( "citrine_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.citrineTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeTile2Stairs = createBlock("jade_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadeTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jasperTile2Stairs = createBlock( "jasper_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jasperTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> labradoriteTile2Stairs = createBlock( "labradorite_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.labradoriteTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> micaTile2Stairs = createBlock( "mica_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.micaTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> moonstoneTile2Stairs = createBlock( "moonstone_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.moonstoneTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> roseQuartzTile2Stairs = createBlock( "rose_quartz_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.roseQuartzTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sodaliteTile2Stairs = createBlock( "sodalite_tile_2_stairs",
+            () -> new StairsBlock(() -> ModBlocks.sodaliteTile2.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GEM STAIRS-- TILE 3//
+    public static final RegistryObject<Block> amethystTile3Stairs = createBlock( "amethyst_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.amethystTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> aventurineTile3Stairs = createBlock( "aventurine_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.aventurineTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> carnelianTile3Stairs = createBlock( "carnelian_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.carnelianTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> chalcopyriteTile3Stairs = createBlock( "chalcopyrite_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.chalcopyriteTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> citrineTile3Stairs = createBlock( "citrine_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.citrineTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeTile3Stairs = createBlock("jade_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadeTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jasperTile3Stairs = createBlock( "jasper_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jasperTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> labradoriteTile3Stairs = createBlock( "labradorite_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.labradoriteTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> micaTile3Stairs = createBlock( "mica_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.micaTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> moonstoneTile3Stairs = createBlock( "moonstone_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.moonstoneTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> roseQuartzTile3Stairs = createBlock( "rose_quartz_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.roseQuartzTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sodaliteTile3Stairs = createBlock( "sodalite_tile_3_stairs",
+            () -> new StairsBlock(() -> ModBlocks.sodaliteTile3.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GEM STAIRS-- TILE 4//
+    public static final RegistryObject<Block> amethystTile4Stairs = createBlock( "amethyst_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.amethystTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> aventurineTile4Stairs = createBlock( "aventurine_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.aventurineTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> carnelianTile4Stairs = createBlock( "carnelian_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.carnelianTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> chalcopyriteTile4Stairs = createBlock( "chalcopyrite_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.chalcopyriteTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> citrineTile4Stairs = createBlock( "citrine_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.citrineTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeTile4Stairs = createBlock("jade_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadeTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jasperTile4Stairs = createBlock( "jasper_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jasperTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> labradoriteTile4Stairs = createBlock( "labradorite_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.labradoriteTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> micaTile4Stairs = createBlock( "mica_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.micaTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> moonstoneTile4Stairs = createBlock( "moonstone_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.moonstoneTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> roseQuartzTile4Stairs = createBlock( "rose_quartz_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.roseQuartzTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sodaliteTile4Stairs = createBlock( "sodalite_tile_4_stairs",
+            () -> new StairsBlock(() -> ModBlocks.sodaliteTile4.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GEM STAIRS-- TILE 5//
+    public static final RegistryObject<Block> amethystTile5Stairs = createBlock( "amethyst_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.amethystTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> aventurineTile5Stairs = createBlock( "aventurine_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.aventurineTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> carnelianTile5Stairs = createBlock( "carnelian_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.carnelianTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> chalcopyriteTile5Stairs = createBlock( "chalcopyrite_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.chalcopyriteTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> citrineTile5Stairs = createBlock( "citrine_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.citrineTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeTile5Stairs = createBlock("jade_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadeTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jasperTile5Stairs = createBlock( "jasper_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jasperTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> labradoriteTile5Stairs = createBlock( "labradorite_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.labradoriteTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> micaTile5Stairs = createBlock( "mica_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.micaTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> moonstoneTile5Stairs = createBlock( "moonstone_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.moonstoneTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> roseQuartzTile5Stairs = createBlock( "rose_quartz_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.roseQuartzTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sodaliteTile5Stairs = createBlock( "sodalite_tile_5_stairs",
+            () -> new StairsBlock(() -> ModBlocks.sodaliteTile5.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GEM STAIRS-- TILE 6//
+    public static final RegistryObject<Block> amethystTile6Stairs = createBlock( "amethyst_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.amethystTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> aventurineTile6Stairs = createBlock( "aventurine_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.aventurineTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> carnelianTile6Stairs = createBlock( "carnelian_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.carnelianTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> chalcopyriteTile6Stairs = createBlock( "chalcopyrite_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.chalcopyriteTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> citrineTile6Stairs = createBlock( "citrine_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.citrineTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeTile6Stairs = createBlock("jade_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jadeTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jasperTile6Stairs = createBlock( "jasper_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.jasperTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> labradoriteTile6Stairs = createBlock( "labradorite_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.labradoriteTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> micaTile6Stairs = createBlock( "mica_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.micaTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> moonstoneTile6Stairs = createBlock( "moonstone_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.moonstoneTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> roseQuartzTile6Stairs = createBlock( "rose_quartz_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.roseQuartzTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sodaliteTile6Stairs = createBlock( "sodalite_tile_6_stairs",
+            () -> new StairsBlock(() -> ModBlocks.sodaliteTile6.get().getDefaultState(), Block.Properties.create(Material.ROCK, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //SLABS//
 
@@ -1276,6 +1760,36 @@ public class ModBlocks
     public static final RegistryObject<Block> brownLargeBrickSlab = createBlock("brown_large_brick_slab",
             () -> new SlabBlock(Block.Properties.from(ModBlocks.brownLargeBrickBlock.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    //SLABS--WOOD//
+    public static final RegistryObject<Block> crabappleSlab = createBlock( "crabapple_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.crabapplePlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> poincianaSlab = createBlock("poinciana_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.poincianaPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> laburnumSlab = createBlock("laburnum_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.laburnumPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jadeSlab = createBlock("jade_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.jadePlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> paulowniaSlab = createBlock("paulownia_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.paulowniaPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> wisteriaSlab = createBlock("wisteria_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.wisteriaPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jacarandaSlab = createBlock("jacaranda_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.jacarandaPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dogwoodSlab = createBlock("dogwood_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.dogwoodPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> silverbellSlab = createBlock("silverbell_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.silverbellPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarSlab = createBlock("cedar_slab",
+            () -> new SlabBlock(Block.Properties.from(ModBlocks.cedarPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //SLABS--STAINED//
     public static final RegistryObject<Block> redStainedSlab = createBlock( "red_stained_slab",
@@ -1327,6 +1841,23 @@ public class ModBlocks
     public static final RegistryObject<Block> brownStainedSlab = createBlock("brown_stained_slab",
             () -> new SlabBlock(Block.Properties.from(ModBlocks.brownStainedPlanks.get())), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>  acaciaBookshelf = createBlock("acacia_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   birchBookshelf = createBlock( "birch_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   oakBookshelf = createBlock("oak_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>  dark_oakBookshelf = createBlock("dark_oak_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   spruceBookshelf = createBlock("spruce_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   jungleBookshelf = createBlock("jungle_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //BOOKSHELVES--TREES//
     public static final RegistryObject<Block>  crabappleBookshelf = createBlock("crabapple_bookshelf",
@@ -1354,6 +1885,9 @@ public class ModBlocks
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   silverbellBookshelf = createBlock("silverbell_bookshelf",
+            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   cedarBookshelf = createBlock("cedar_bookshelf",
             () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
 
@@ -1436,6 +1970,9 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellFence = createBlock("silverbell_fence",
             () -> new FenceBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> cedarFence = createBlock("cedar_fence",
+            () -> new FenceBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
     //FENCE--STAINED//
     public static final RegistryObject<Block> redStainedFence = createBlock(  "red_stained_fence",
             () -> new FenceBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -1513,6 +2050,8 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellFenceGate = createBlock("silverbell_fence_gate",
             () -> new FenceGateBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> cedarFenceGate = createBlock("cedar_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //FENCE GATE--STAINED//
     public static final RegistryObject<Block> redStainedFenceGate = createBlock(  "red_stained_fence_gate",
@@ -1591,6 +2130,9 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellButton = createBlock("silverbell_button",
             () -> new CustomWoodButton(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> cedarButton = createBlock(  "cedar_button",
+            () -> new CustomWoodButton(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
     //BUTTON--STAINED//
     public static final RegistryObject<Block> redStainedButton = createBlock(  "red_stained_button",
             () -> new CustomWoodButton(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -1666,6 +2208,9 @@ public class ModBlocks
             () -> new CustomPressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING,Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> silverbellPressurePlate = createBlock("silverbell_pressure_plate",
+            () -> new CustomPressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING,Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarPressurePlate = createBlock("cedar_pressure_plate",
             () -> new CustomPressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING,Block.Properties.create(Material.WOOD, MaterialColor.GOLD)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //PRESSURE_PLATE--STAINED//
@@ -1822,6 +2367,29 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellDoor1 = createBlock("silverbell_door_1",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    //DOOR1--WOOD//
+    public static final RegistryObject<Block> acaciaDoor1 = createBlock("acacia_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchDoor1 = createBlock("birch_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oakDoor1 = createBlock("oak_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> darkOakDoor1 = createBlock("dark_oak_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> spruceDoor1 = createBlock("spruce_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungleDoor1 = createBlock("jungle_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarDoor1 = createBlock("cedar_door_1",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
     //DOOR1--STAINED//
     public static final RegistryObject<Block> redStainedDoor1 = createBlock(  "red_stained_door_1",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -1897,6 +2465,27 @@ public class ModBlocks
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> silverbellDoor2 = createBlock("silverbell_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> acaciaDoor2 = createBlock("acacia_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchDoor2 = createBlock("birch_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oakDoor2 = createBlock("oak_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oakDoor2 = createBlock("dark_oak_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> spruceDoor2 = createBlock("spruce_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungleDoor2 = createBlock("jungle_door_2",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarDoor2 = createBlock("cedar_door_2",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //DOOR2--STAINED//
@@ -1976,6 +2565,28 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellDoor3 = createBlock("silverbell_door_3",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+
+    public static final RegistryObject<Block> acaciaDoor3 = createBlock("acacia_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchDoor3 = createBlock("birch_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oakDoor3 = createBlock("oak_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oakDoor3 = createBlock("dark_oak_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> spruceDoor3 = createBlock("spruce_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungleDoor3 = createBlock("jungle_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarDoor3 = createBlock("cedar_door_3",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
     //DOOR3--STAINED//
     public static final RegistryObject<Block> redStainedDoor3 = createBlock(  "red_stained_door_3",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -2051,6 +2662,28 @@ public class ModBlocks
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> silverbellDoor4 = createBlock("silverbell_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    public static final RegistryObject<Block> acaciaDoor4 = createBlock("acacia_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchDoor4 = createBlock("birch_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oakDoor4 = createBlock("oak_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oakDoor4 = createBlock("dark_oak_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> spruceDoor4 = createBlock("spruce_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungleDoor4 = createBlock("jungle_door_4",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarDoor4 = createBlock("cedar_door_4",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //DOOR4--STAINED//
@@ -2130,6 +2763,28 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbellDoor5 = createBlock("silverbell_door_5",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> acaciaDoor5 = createBlock("acacia_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchDoor5 = createBlock("birch_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oakDoor5 = createBlock("oak_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oakDoor5 = createBlock("dark_oak_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> spruceDoor5 = createBlock("spruce_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungleDoor5 = createBlock("jungle_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarDoor5 = createBlock("cedar_door_5",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
     //DOOR5--STAINED//
     public static final RegistryObject<Block> redStainedDoor5 = createBlock(  "red_stained_door_5",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -2205,6 +2860,27 @@ public class ModBlocks
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> silverbellDoor6 = createBlock("silverbell_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> acaciaDoor6 = createBlock("acacia_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchDoor6 = createBlock("birch_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oakDoor6 = createBlock("oak_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oakDoor6 = createBlock("dark_oak_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> spruceDoor6 = createBlock("spruce_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungleDoor6 = createBlock("jungle_door_6",
+            () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedarDoor6 = createBlock("cedar_door_6",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //DOOR6--STAINED//
@@ -2289,6 +2965,28 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbelltrapDoor1 = createBlock("silverbell_trapdoor_1",
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    //TRAPDOOR1--WOOD//
+    public static final RegistryObject<Block> acaciatrapDoor1 = createBlock("acacia_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchtrapDoor1 = createBlock("birch_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oaktrapDoor1 = createBlock("oak_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> darkOaktrapDoor1 = createBlock("dark_oak_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sprucetrapDoor1 = createBlock("spruce_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungletrapDoor1 = createBlock("jungle_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedartrapDoor1 = createBlock("cedar_trapdoor_1",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
     //TRAPDOOR1--STAINED//
     public static final RegistryObject<Block> redStainedtrapDoor1 = createBlock(  "red_stained_trapdoor_1",
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -2365,6 +3063,28 @@ public class ModBlocks
 
     public static final RegistryObject<Block> silverbelltrapDoor2 = createBlock("silverbell_trapdoor_2",
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> acaciatrapDoor2 = createBlock("acacia_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchtrapDoor2 = createBlock("birch_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oaktrapDoor2 = createBlock("oak_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oaktrapDoor2 = createBlock("dark_oak_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sprucetrapDoor2 = createBlock("spruce_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungletrapDoor2 = createBlock("jungle_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedartrapDoor2 = createBlock("cedar_trapdoor_2",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
     //TRAPDOOR2--STAINED//
     public static final RegistryObject<Block> redStainedtrapDoor2 = createBlock(  "red_stained_trapdoor_2",
@@ -2443,6 +3163,28 @@ public class ModBlocks
     public static final RegistryObject<Block> silverbelltrapDoor3 = createBlock("silverbell_trapdoor_3",
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> acaciatrapDoor3 = createBlock("acacia_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchtrapDoor3 = createBlock("birch_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oaktrapDoor3 = createBlock("oak_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oaktrapDoor3 = createBlock("dark_oak_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sprucetrapDoor3 = createBlock("spruce_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungletrapDoor3 = createBlock("jungle_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedartrapDoor3 = createBlock("cedar_trapdoor_3",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
     //TRAPDOOR3--STAINED//
     public static final RegistryObject<Block> redStainedtrapDoor3 = createBlock(  "red_stained_trapdoor_3",
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -2518,6 +3260,27 @@ public class ModBlocks
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> silverbelltrapDoor4 = createBlock("silverbell_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> acaciatrapDoor4 = createBlock("acacia_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> birchtrapDoor4 = createBlock("birch_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> oaktrapDoor4 = createBlock("oak_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> dark_oaktrapDoor4 = createBlock("dark_oak_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> sprucetrapDoor4 = createBlock("spruce_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> jungletrapDoor4 = createBlock("jungle_trapdoor_4",
+            () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> cedartrapDoor4 = createBlock("cedar_trapdoor_4",
             () -> new CustomTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //TRAPDOOR4--STAINED//
