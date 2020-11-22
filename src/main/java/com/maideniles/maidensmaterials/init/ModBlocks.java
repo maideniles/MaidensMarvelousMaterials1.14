@@ -31,6 +31,11 @@ public class ModBlocks
 {  public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS,
         MarvelousMaterials.MODID);
 
+    public static List<Item> gatheredOres = new ArrayList<>();
+    public static List<String> oresIWant = new ArrayList<>();
+    public static List<Block> validBlocks = new ArrayList<>();
+
+
     public static final List<Block> GRASS= new ArrayList<Block>();
 
     private static <B extends Block> RegistryObject<B> createBlockWithItem(String name, Supplier<? extends B> supplier, Supplier<BlockItem> item) {
@@ -174,34 +179,34 @@ public class ModBlocks
 
     //LEAVES
     public static final RegistryObject<Block>  crabappleLeaves = createBlock("crabapple_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockCrabappleLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   poincianaLeaves = createBlock( "poinciana_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockPoincianaLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   laburnumLeaves = createBlock("laburnum_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockLaburnumLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>  jadeLeaves = createBlock("jade_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockJadeLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   paulowniaLeaves = createBlock("paulownia_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockPaulowniaLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   wisteriaLeaves = createBlock("wisteria_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockWisteriaLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   jacarandaLeaves = createBlock("jacaranda_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockJacarandaLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   dogwoodLeaves = createBlock("dogwood_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockDogwoodLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   silverbellLeaves = createBlock("silverbell_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockSilverbellLeaves(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   cedarLeaves = createBlock("cedar_leaves",
-            () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new LeavesBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(2.0F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
 
     //PLANKS--TREES//

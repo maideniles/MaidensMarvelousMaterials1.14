@@ -2,6 +2,7 @@ package com.maideniles.maidensmaterials.block.leaves;
 
 import com.maideniles.maidensmaterials.init.ModItems;
 import com.maideniles.maidensmaterials.init.ItemInit;
+import com.maideniles.maidensmaterials.potion.MaidensPotions;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -31,7 +32,7 @@ public class BlockJadeLeaves extends LeavesBlock {
 
         if (!worldIn.isRemote()) {
 
-            if (shears.getItem() == ModItems.PRUNING_SHEARS.get()) {
+            if (shears.getItem() == ModItems.PRUNING_SHEARS.get()|| player.isPotionActive(MaidensPotions.FLORAL_FORTUNE_EFFECT.get())) {
 
 
                 ItemEntity blossom = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.JADE_BLOSSOMS.get(), 1));

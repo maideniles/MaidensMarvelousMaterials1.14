@@ -4,6 +4,7 @@ package com.maideniles.maidensmaterials;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.init.ModItems;
 import com.maideniles.maidensmaterials.potion.MaidensPotions;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -50,6 +51,11 @@ public final class MarvelousMaterials {
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
+
+
+
+
+
 
     }
 

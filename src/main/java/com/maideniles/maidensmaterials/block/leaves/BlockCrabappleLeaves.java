@@ -4,6 +4,7 @@ import com.maideniles.maidensmaterials.init.ItemInit;
 import com.maideniles.maidensmaterials.init.ModItems;
 
 
+import com.maideniles.maidensmaterials.potion.MaidensPotions;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -32,12 +33,12 @@ public class BlockCrabappleLeaves extends LeavesBlock {
 
 
         if (!worldIn.isRemote()) {
-
-            if (shears.getItem() == ModItems.PRUNING_SHEARS.get()) {
+            //IS PLAYER HOLDING SHEARS? //                      // OR //           // DID PLAYER DRINK FLORAL_FORTUNE POTION? //
+            if (shears.getItem() == ModItems.PRUNING_SHEARS.get() || player.isPotionActive(MaidensPotions.FLORAL_FORTUNE_EFFECT.get())) {
 
 
                 ItemEntity blossom = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.CRABAPPLE_BLOSSOMS.get(), 1));
-                worldIn.addEntity(blossom);
+                worldIn.addEntity(blossom); //SPAWN THE BLOSSOMS//
 
 
                 shears.damageItem(1, player, (p_220045_0_) -> {
@@ -49,7 +50,7 @@ public class BlockCrabappleLeaves extends LeavesBlock {
                 if ((new Random().nextInt(100) + 1) < 10) {
                     ItemEntity itemessence = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.FLORAL_ESSENCE.get(), 1));
                     itemessence.setPickupDelay(0);
-                    worldIn.addEntity(itemessence);
+                    worldIn.addEntity(itemessence);  //SPAWN THE ESSENCE//
                 }
 
             }

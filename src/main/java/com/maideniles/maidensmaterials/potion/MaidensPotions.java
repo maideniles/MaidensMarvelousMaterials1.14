@@ -28,10 +28,10 @@ public class MaidensPotions {
 
 
     public static final RegistryObject<Potion> FLORAL_FORTUNE_POTION = POTIONS.register("floral_fortune",
-            () -> new Potion(new EffectInstance(FLORAL_FORTUNE_EFFECT.get(), 1200, 0)));
+            () -> new Potion(new EffectInstance(FLORAL_FORTUNE_EFFECT.get(), 900, 0)));
 
     public static final RegistryObject<Potion> GATHERERS_GLEE_POTION = POTIONS.register("gatherers_glee",
-            () -> new Potion(new EffectInstance(GATHERERS_GLEE_EFFECT.get(), 2400, 0)));
+            () -> new Potion(new EffectInstance(GATHERERS_GLEE_EFFECT.get(), 900, 0)));
 
 
 
