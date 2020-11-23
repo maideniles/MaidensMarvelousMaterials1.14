@@ -1,10 +1,10 @@
 package com.maideniles.maidensmaterials;
 
 
+import com.maideniles.maidensmaterials.init.BiomeInit;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.init.ModItems;
 import com.maideniles.maidensmaterials.potion.MaidensPotions;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -12,7 +12,9 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -22,6 +24,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(MarvelousMaterials.MODID)
+@Mod.EventBusSubscriber(modid = MarvelousMaterials.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class MarvelousMaterials {
 
     public static MarvelousMaterials instance;
@@ -48,6 +51,8 @@ public final class MarvelousMaterials {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
 
+        BiomeInit.BIOMES.register(modEventBus);
+
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +62,11 @@ public final class MarvelousMaterials {
 
 
 
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+        BiomeInit.registerBiomes();
     }
 
 

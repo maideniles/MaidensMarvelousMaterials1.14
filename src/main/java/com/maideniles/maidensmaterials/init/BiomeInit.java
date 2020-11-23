@@ -1,10 +1,55 @@
 package com.maideniles.maidensmaterials.init;
 
-import com.maideniles.maidensmaterials.world.biome.BiomeOrnamentalForest;
+import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.world.biomes.BiomeOrnamentalForest;
+import com.maideniles.maidensmaterials.world.biomes.BiomeOrnamentalForestSurfaceBuilder;
+import net.minecraft.block.Blocks;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.ISurfaceBuilderConfig;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BiomeInit {
+
+    public static final DeferredRegister<Biome> BIOMES = new DeferredRegister<>(ForgeRegistries.BIOMES,
+            MarvelousMaterials.MODID);
+
+    public static final RegistryObject<Biome> ORNAMENTALFOREST_BIOME = BIOMES
+            .register("ornamentalforest_biome",
+                    () -> new BiomeOrnamentalForest(
+                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.05F).temperature(0.4F)
+                                    .waterColor(4159204).waterFogColor(329011)
+                                    .surfaceBuilder(
+                                            new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
+                                                    register("example_surface",
+                                                            new BiomeOrnamentalForestSurfaceBuilder(
+                                                                    SurfaceBuilderConfig::deserialize)),
+                                                    new SurfaceBuilderConfig(Blocks.COARSE_DIRT.getDefaultState(),
+                                                            Blocks.DIRT.getDefaultState(),
+                                                            Blocks.DIRT.getDefaultState())))
+                                    .category(Biome.Category.PLAINS).downfall(0.5f).depth(0.125f).parent(null)));
+
+
+    public static void registerBiomes() {
+        registerBiome(ORNAMENTALFOREST_BIOME.get(), Type.PLAINS, Type.OVERWORLD);
+    }
+
+    private static void registerBiome(Biome biome, Type... types) {
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 100));
+        BiomeDictionary.addTypes(biome, types);
+        BiomeManager.addSpawnBiome(biome);
+    }
+
+    @SuppressWarnings("deprecation")
+    private static <C extends ISurfaceBuilderConfig, F extends SurfaceBuilder<C>> F register(String key, F builderIn) {
+        return (F) (Registry.<SurfaceBuilder<?>>register(Registry.SURFACE_BUILDER, key, builderIn));
+    }
 }
