@@ -2,8 +2,11 @@ package com.maideniles.maidensmaterials.world.feature.tree;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.util.MaidensTreeColor;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.JungleTreeFeature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 
 import javax.annotation.Nullable;
@@ -14,7 +17,8 @@ public class MaidensTrees extends Tree {
 
     public MaidensTrees(MaidensTreeColor colorIn) {
         color = colorIn;
-    }
+
+        }
 
 
     @Nullable

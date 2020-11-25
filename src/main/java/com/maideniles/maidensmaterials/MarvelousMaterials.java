@@ -5,6 +5,7 @@ import com.maideniles.maidensmaterials.init.BiomeInit;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.init.ModItems;
 import com.maideniles.maidensmaterials.potion.MaidensPotions;
+import com.maideniles.maidensmaterials.world.feature.MaidensFeatures;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -52,6 +53,7 @@ public final class MarvelousMaterials {
         ModItems.ITEMS.register(modEventBus);
 
         BiomeInit.BIOMES.register(modEventBus);
+
 
 
         instance = this;

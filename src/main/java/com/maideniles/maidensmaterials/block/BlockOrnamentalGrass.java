@@ -27,25 +27,25 @@ public class BlockOrnamentalGrass extends GrassBlock implements IGrowable {
         super(properties);
     }
 
-    @Override
-    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+  //  @Override
+  //  public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
 
         // TODO Auto-generated method stub
-        if(player.getHeldItem(handIn).toString().toLowerCase().contains("hoe")) {
-            worldIn.setBlockState(pos, Blocks.FARMLAND.getDefaultState());
-            worldIn.playSound(player, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-        }
+  //      if(player.getHeldItem(handIn).toString().toLowerCase().contains("hoe")) {
+   //         worldIn.setBlockState(pos, Blocks.FARMLAND.getDefaultState());
+   //         worldIn.playSound(player, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+   //     }
 
-        int howextraisthis = EnchantmentHelper.getEnchantmentLevel(
-                ModEnchantments.FLOWER_POWER,
-                player.getHeldItem(handIn));
-        if (howextraisthis > 0) {
+   //     int howextraisthis = EnchantmentHelper.getEnchantmentLevel(
+   //             ModEnchantments.FLOWER_POWER,
+   //             player.getHeldItem(handIn));
+    //    if (howextraisthis > 0) {
 
-            worldIn.setBlockState(pos, ModBlocks.ornamentalPath.get().getDefaultState());
-        }
+   //         worldIn.setBlockState(pos, ModBlocks.ornamentalPath.get().getDefaultState());
+    //    }
 
-        return true;
-    }
+   //     return true;
+  //  }
 
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
         return worldIn.getBlockState(pos.up()).isAir();
