@@ -10,7 +10,8 @@ public enum MaidensTreeColor {
     PURPLE,  //JACARANDA
     PINK,  //DOGWOOD
     WHITE,  //SILVERBELL
-    CEDAR  //CEDAR
-
+    CEDAR,  //CEDAR
+    APPLE, //APPLE
+    GRAPEFRUIT //GRAPEFRUIT
 
 }

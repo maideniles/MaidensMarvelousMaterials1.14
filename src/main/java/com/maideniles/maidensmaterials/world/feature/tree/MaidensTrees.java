@@ -67,6 +67,13 @@ public class MaidensTrees extends Tree {
             case CEDAR:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.cedarLeaves.get().getDefaultState())):
                     new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.cedarLeaves.get().getDefaultState()));
 
+            case APPLE:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.appleLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.appleLeaves.get().getDefaultState()));
+
+
+            case GRAPEFRUIT:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
+
 
         }
 

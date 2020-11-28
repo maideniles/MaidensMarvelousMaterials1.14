@@ -4,6 +4,8 @@ package com.maideniles.maidensmaterials.init;
 import com.maideniles.maidensmaterials.MarvelousMaterials;
 import com.maideniles.maidensmaterials.block.*;
 
+import com.maideniles.maidensmaterials.block.fruit.GrowingAppleBlock;
+import com.maideniles.maidensmaterials.block.fruit.GrowingGrapefruitBlock;
 import com.maideniles.maidensmaterials.block.leaves.*;
 import com.maideniles.maidensmaterials.block.vase.*;
 import com.maideniles.maidensmaterials.util.MaidensTreeColor;
@@ -14,10 +16,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -208,6 +207,13 @@ public class ModBlocks
     public static final RegistryObject<Block>   cedarLeaves = createBlock("cedar_leaves",
             () -> new LeavesBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>   appleLeaves = createBlock("apple_leaves",
+            () -> new GrowingAppleBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    public static final RegistryObject<Block>   grapefruitLeaves = createBlock("grapefruit_leaves",
+            () -> new GrowingGrapefruitBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
     //PLANKS--TREES//
     public static final RegistryObject<Block>  crabapplePlanks = createBlock("crabapple_planks",
@@ -325,6 +331,11 @@ public class ModBlocks
     public static final RegistryObject<Block> cedarSapling = createBlock("cedar_sapling",
             () -> new CustomSaplingBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT), new MaidensTrees(MaidensTreeColor.CEDAR)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block> appleSapling = createBlock("apple_sapling",
+            () -> new CustomSaplingBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT), new MaidensTrees(MaidensTreeColor.APPLE)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> grapefruitSapling = createBlock("grapefruit_sapling",
+            () -> new CustomSaplingBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT), new MaidensTrees(MaidensTreeColor.GRAPEFRUIT)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     //VINES
     public static final RegistryObject<Block>  crabappleVine = createBlock("crabapple_vine",

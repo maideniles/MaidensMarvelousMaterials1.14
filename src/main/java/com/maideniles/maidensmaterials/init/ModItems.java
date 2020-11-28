@@ -2,6 +2,7 @@ package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
 import com.maideniles.maidensmaterials.item.MortarNPestleItem;
+import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.event.RegistryEvent;
@@ -516,6 +517,10 @@ public class ModItems {
 
 	public static final RegistryObject<Item>STAIN_BROWN = ITEMS.register("stain_brown",
 			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>GRAPEFRUIT = ITEMS.register("grapefruit",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
 
 
 }
