@@ -38,6 +38,10 @@ public abstract class MaidensFeatures<FC extends IFeatureConfig> extends net.min
     public static final Feature<NoFeatureConfig> SILVERBELL_TREE = register("silverbell_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.silverbellLog.get().getDefaultState(), ModBlocks.silverbellLeaves.get().getDefaultState()));
 
 
+    public static final Feature<NoFeatureConfig> APPLE_TREE = register("apple_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.appleLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> GRAPEFRUIT_TREE = register("grapefruit_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
+
 
     private static <C extends IFeatureConfig, F extends Feature<C>> F register(String key, F value)
     {
