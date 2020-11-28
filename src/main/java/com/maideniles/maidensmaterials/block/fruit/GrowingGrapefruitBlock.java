@@ -58,7 +58,7 @@ public class GrowingGrapefruitBlock extends BushBlock implements IGrowable {
     }
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
         Block block = state.getBlock();
-        return block == Blocks.AIR ||block.isIn(BlockTags.LOGS) || block == Blocks.DIRT || block == ModBlocks.grapefruitLeaves.get()|| block == Blocks.COARSE_DIRT || block == Blocks.PODZOL || block == Blocks.FARMLAND || block.isIn(BlockTags.LEAVES);
+        return block == Blocks.AIR ||block.isIn(BlockTags.LOGS) || block == Blocks.DIRT || block == ModBlocks.grapefruitLeaves.get()|| block == Blocks.COARSE_DIRT || block == Blocks.PODZOL || block == Blocks.FARMLAND || block == Blocks.SAND || block.isIn(BlockTags.LEAVES);
     }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {

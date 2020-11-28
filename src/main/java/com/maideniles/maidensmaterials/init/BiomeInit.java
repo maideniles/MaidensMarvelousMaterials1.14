@@ -1,15 +1,14 @@
 package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.world.biomes.BiomeOasisShore;
+import com.maideniles.maidensmaterials.world.biomes.BiomeOasisShoreSurfaceBuilder;
 import com.maideniles.maidensmaterials.world.biomes.BiomeOrnamentalForest;
 import com.maideniles.maidensmaterials.world.biomes.BiomeOrnamentalForestSurfaceBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.ISurfaceBuilderConfig;
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
+import net.minecraft.world.gen.surfacebuilders.*;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
@@ -29,7 +28,7 @@ public class BiomeInit {
                                     .waterColor(4159204).waterFogColor(329011)
                                     .surfaceBuilder(
                                             new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
-                                                    register("example_surface",
+                                                    register("ornamental_surface",
                                                             new BiomeOrnamentalForestSurfaceBuilder(
                                                                     SurfaceBuilderConfig::deserialize)),
                                                     new SurfaceBuilderConfig(Blocks.COARSE_DIRT.getDefaultState(),
@@ -37,13 +36,31 @@ public class BiomeInit {
                                                             Blocks.DIRT.getDefaultState())))
                                     .category(Biome.Category.PLAINS).downfall(0.5f).depth(0.125f).parent(null)));
 
+    public static final RegistryObject<Biome> OASISSHORE_BIOME = BIOMES
+            .register("oasisshore_biome",
+                    () -> new BiomeOasisShore(
+                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.0025F).temperature(0.8F)
+                                    .waterColor(4159204).waterFogColor(329011)
+                                    .surfaceBuilder(
+                                            new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
+                                                    register("oasis_surface",
+                                                            new BiomeOasisShoreSurfaceBuilder(
+                                                                    SurfaceBuilderConfig::deserialize)),
+                                                    new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
+                                                            Blocks.SAND.getDefaultState(),
+                                                            Blocks.SAND.getDefaultState())))
+                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.125f).parent(null)));
+
 
     public static void registerBiomes() {
+
         registerBiome(ORNAMENTALFOREST_BIOME.get(), Type.PLAINS, Type.OVERWORLD);
+        registerBiome(OASISSHORE_BIOME.get(), Type.OCEAN, Type.OVERWORLD);
     }
 
     private static void registerBiome(Biome biome, Type... types) {
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 100));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(ORNAMENTALFOREST_BIOME.get(), 100));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(OASISSHORE_BIOME.get(), 100));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }
