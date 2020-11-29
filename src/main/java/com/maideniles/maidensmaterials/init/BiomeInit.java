@@ -56,11 +56,11 @@ public class BiomeInit {
     public static void registerBiomes() {
 
         registerBiome(ORNAMENTALFOREST_BIOME.get(), Type.PLAINS, Type.OVERWORLD);
-        registerBiome(OASISSHORE_BIOME.get(), Type.OCEAN, Type.OVERWORLD);
+        registerBiome(OASISSHORE_BIOME.get(), Type.BEACH, Type.OVERWORLD);
     }
 
     private static void registerBiome(Biome biome, Type... types) {
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(ORNAMENTALFOREST_BIOME.get(), 100));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(ORNAMENTALFOREST_BIOME.get(), 30));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(OASISSHORE_BIOME.get(), 10));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
