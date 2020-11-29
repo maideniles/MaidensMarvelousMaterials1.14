@@ -8,6 +8,7 @@ import com.maideniles.maidensmaterials.world.biomes.BiomeOrnamentalForestSurface
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.surfacebuilders.*;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
@@ -49,7 +50,7 @@ public class BiomeInit {
                                                     new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState())))
-                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.125f).parent(null)));
+                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.125f).parent(Biomes.WARM_OCEAN.getParent())));
 
 
     public static void registerBiomes() {
