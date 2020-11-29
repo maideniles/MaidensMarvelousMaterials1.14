@@ -25,7 +25,7 @@ public class BiomeInit {
     public static final RegistryObject<Biome> ORNAMENTALFOREST_BIOME = BIOMES
             .register("ornamentalforest_biome",
                     () -> new BiomeOrnamentalForest(
-                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.05F).temperature(0.4F)
+                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.05F).temperature(0.8F)
                                     .waterColor(4159204).waterFogColor(329011)
                                     .surfaceBuilder(
                                             new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
@@ -35,12 +35,12 @@ public class BiomeInit {
                                                     new SurfaceBuilderConfig(Blocks.COARSE_DIRT.getDefaultState(),
                                                             Blocks.DIRT.getDefaultState(),
                                                             Blocks.DIRT.getDefaultState())))
-                                    .category(Biome.Category.PLAINS).downfall(0.5f).depth(0.125f).parent(null)));
+                                    .category(Biome.Category.PLAINS).downfall(0.4F).depth(0.125F).parent(null)));
 
     public static final RegistryObject<Biome> OASISSHORE_BIOME = BIOMES
             .register("oasisshore_biome",
                     () -> new BiomeOasisShore(
-                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.025F).temperature(0.8F)
+                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.0025F).temperature(0.8F)
                                     .waterColor(4159204).waterFogColor(329011)
                                     .surfaceBuilder(
                                             new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
