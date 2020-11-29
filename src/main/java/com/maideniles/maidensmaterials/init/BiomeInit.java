@@ -50,7 +50,7 @@ public class BiomeInit {
                                                     new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState())))
-                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.125f).parent(Biomes.WARM_OCEAN.getParent())));
+                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.125f).parent(Biomes.WARM_OCEAN.getParent()))); //Experimental
 
 
     public static void registerBiomes() {
