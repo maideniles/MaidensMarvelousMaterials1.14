@@ -1,15 +1,12 @@
 package com.maideniles.maidensmaterials.world.feature;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.block.OrnamentalMushroomFeature;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.world.feature.tree.MaidensTreeFeature;
 import com.maideniles.maidensmaterials.world.feature.tree.MaidensTreeFeatureVines;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.IFeatureConfig;
-import net.minecraft.world.gen.feature.JungleTreeFeature;
-import net.minecraft.world.gen.feature.NoFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraftforge.registries.ForgeRegistries;
 
 
@@ -36,6 +33,8 @@ public abstract class MaidensFeatures<FC extends IFeatureConfig> extends net.min
     public static final Feature<NoFeatureConfig> JACARANDA_TREE = register("jacaranda_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.jacarandaLog.get().getDefaultState(), ModBlocks.jacarandaLeaves.get().getDefaultState()));
     public static final Feature<NoFeatureConfig> DOGWOOD_TREE = register("dogwood_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.dogwoodLog.get().getDefaultState(), ModBlocks.dogwoodLeaves.get().getDefaultState()));
     public static final Feature<NoFeatureConfig> SILVERBELL_TREE = register("silverbell_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.silverbellLog.get().getDefaultState(), ModBlocks.silverbellLeaves.get().getDefaultState()));
+
+    public static final FlowersFeature ORNAMENTAL_MUSHROOM = register("ornamental_flower", new OrnamentalMushroomFeature(NoFeatureConfig::deserialize));
 
 
     public static final Feature<NoFeatureConfig> APPLE_TREE = register("apple_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.appleLeaves.get().getDefaultState()));

@@ -7,12 +7,17 @@ import java.util.Set;
 import java.util.function.Function;
 
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CocoaBlock;
+import net.minecraft.block.material.Material;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.gen.IWorldGenerationBaseReader;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
@@ -119,6 +124,82 @@ public class MaidensTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
         } else {
             return false;
         }
+    }
+    protected static boolean isAir(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        if (!(worldIn instanceof net.minecraft.world.IBlockReader)) // FORGE: Redirect to state method when possible
+            return worldIn.hasBlockState(pos, BlockState::isAir);
+        else return worldIn.hasBlockState(pos, state -> state.isAir((net.minecraft.world.IBlockReader)worldIn, pos));
+    }
+
+    protected static boolean isDirt(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        return worldIn.hasBlockState(pos, (p_214590_0_) -> {
+            return Block.isDirt(p_214590_0_.getBlock());
+        });
+    }
+
+    protected static boolean isWater(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        return worldIn.hasBlockState(pos, (p_214583_0_) -> {
+            return p_214583_0_.getBlock() == Blocks.WATER;
+        });
+    }
+
+    protected static boolean isLeaves(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        return worldIn.hasBlockState(pos, (p_214579_0_) -> {
+            return p_214579_0_.isIn(BlockTags.LEAVES);
+        });
+    }
+
+    protected static boolean isAirOrLeaves(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        if (!(worldIn instanceof net.minecraft.world.IWorldReader)) // FORGE: Redirect to state method when possible
+            return worldIn.hasBlockState(pos, (p_214581_0_) -> {
+                return p_214581_0_.isAir() || p_214581_0_.isIn(BlockTags.LEAVES);
+            });
+        else return worldIn.hasBlockState(pos, state -> state.canBeReplacedByLeaves((net.minecraft.world.IWorldReader)worldIn, pos));
+    }
+
+    @Deprecated //Forge: moved to isSoil
+    protected static boolean isDirtOrGrassBlock(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        return worldIn.hasBlockState(pos, (p_214582_0_) -> {
+            Block block = p_214582_0_.getBlock();
+            return Block.isDirt(block) || block == Blocks.GRASS_BLOCK || block == ModBlocks.ornamentalGrass.get() || block == Blocks.SAND;
+        });
+    }
+
+    protected static boolean isSoil(IWorldGenerationBaseReader reader, BlockPos pos, net.minecraftforge.common.IPlantable sapling) {
+        if (!(reader instanceof net.minecraft.world.IBlockReader) || sapling == null)
+            return isDirtOrGrassBlock(reader, pos);
+        return reader.hasBlockState(pos, state -> state.canSustainPlant((net.minecraft.world.IBlockReader)reader, pos, Direction.UP, sapling));
+    }
+
+    @Deprecated //Forge: moved to isSoilOrFarm
+    protected static boolean isDirtOrGrassBlockOrFarmland(IWorldGenerationBaseReader worldIn, BlockPos pos) {
+        return worldIn.hasBlockState(pos, (p_214586_0_) -> {
+            Block block = p_214586_0_.getBlock();
+            return Block.isDirt(block) || block == Blocks.GRASS_BLOCK || block == Blocks.FARMLAND
+                    || block == ModBlocks.ornamentalGrass.get() || block == Blocks.SAND;
+        });
+    }
+
+    protected static boolean isSoilOrFarm(IWorldGenerationBaseReader reader, BlockPos pos, net.minecraftforge.common.IPlantable sapling) {
+        if (!(reader instanceof net.minecraft.world.IBlockReader) || sapling == null)
+            return isDirtOrGrassBlockOrFarmland(reader, pos);
+        return reader.hasBlockState(pos, state -> state.canSustainPlant((net.minecraft.world.IBlockReader)reader, pos, Direction.UP, sapling));
+    }
+
+    protected static boolean func_214576_j(IWorldGenerationBaseReader p_214576_0_, BlockPos p_214576_1_) {
+        return p_214576_0_.hasBlockState(p_214576_1_, (p_214588_0_) -> {
+            Material material = p_214588_0_.getMaterial();
+            return material == Material.TALL_PLANTS;
+        });
+    }
+
+    @Deprecated //Forge: moved to setDirtAt
+    protected void func_214584_a(IWorldGenerationReader p_214584_1_, BlockPos p_214584_2_) {
+        if (!isDirt(p_214584_1_, p_214584_2_)) {
+            this.setBlockState(p_214584_1_, p_214584_2_, Blocks.DIRT.getDefaultState());
+        }
+
+
     }
 
     private void placeCocoa(IWorldGenerationReader worldIn, int age, BlockPos pos, Direction side) {

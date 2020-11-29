@@ -16,6 +16,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -938,10 +939,13 @@ public class ModBlocks
 
     //GRASS,FLOWER,PATH,ESSENCES//
     public static final RegistryObject<Block> ornamentalGrass = createBlock("ornamental_grass",
-            () -> new GrassBlock(BlockOrnamentalGrass.Properties.create(Material.PLANTS).hardnessAndResistance(1.0F, 1.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new BlockOrnamentalGrass(BlockOrnamentalGrass.Properties.create(Material.ORGANIC).hardnessAndResistance(1.0F, 1.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> walkFlowers = createBlock("flower_grass",
             () -> new BlockFlowerGrass(BlockFlowerGrass.Properties.create(Material.PLANTS)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> ornamentalMushroom = createBlock("ornamental_mushroom",
+            () -> new OrnamentalMushroomBlock(Effects.NIGHT_VISION, 6,Block.Properties.create(Material.PLANTS)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> ornamentalPath = createBlock( "ornamental_path",
             () -> new BlockPrettyPath(BlockPrettyPath.Properties.create(Material.PLANTS).hardnessAndResistance(1.0F, 1.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);

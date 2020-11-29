@@ -27,71 +27,70 @@ public class BlockOrnamentalGrass extends GrassBlock implements IGrowable {
         super(properties);
     }
 
-  //  @Override
-  //  public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
 
-        // TODO Auto-generated method stub
-  //      if(player.getHeldItem(handIn).toString().toLowerCase().contains("hoe")) {
-   //         worldIn.setBlockState(pos, Blocks.FARMLAND.getDefaultState());
-   //         worldIn.playSound(player, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-   //     }
-
-   //     int howextraisthis = EnchantmentHelper.getEnchantmentLevel(
-   //             ModEnchantments.FLOWER_POWER,
-   //             player.getHeldItem(handIn));
-    //    if (howextraisthis > 0) {
-
-   //         worldIn.setBlockState(pos, ModBlocks.ornamentalPath.get().getDefaultState());
-    //    }
-
-   //     return true;
-  //  }
-
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return worldIn.getBlockState(pos.up()).isAir();
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        return true;
     }
 
+    public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        BlockPos blockpos = pos.up();
+        BlockState blockstate = Blocks.GRASS.getDefaultState();
 
+        for(int i = 0; i < 128; ++i) {
+            BlockPos blockpos1 = blockpos;
+            int j = 0;
 
-    public void Tick(World worldIn, BlockPos pos, BlockState state, Random rand)
-    {
-        if (!worldIn.isRemote)
-        {
-            if (!worldIn.isAreaLoaded(pos, 3)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
-            if (worldIn.getNeighborAwareLightSubtracted(pos.up(),4) >= 4)
-            {
-                worldIn.setBlockState(pos, Blocks.DIRT.getDefaultState());
-            }
-            else
-            {
-                if (worldIn.getNeighborAwareLightSubtracted(pos.up(), 9) >= 9)
-                {
-                    for (int i = 0; i < 4; ++i)
-                    {
-                        BlockPos blockpos = pos.add(rand.nextInt(3) - 1, rand.nextInt(5) - 3, rand.nextInt(3) - 1);
-
-                        if (blockpos.getY() >= 0 && blockpos.getY() < 256 && !worldIn.isBlockLoaded(blockpos))
-                        {
-                            return;
-                        }
-
-                        BlockState iblockstate = worldIn.getBlockState(blockpos.up());
-                        BlockState iblockstate1 = worldIn.getBlockState(blockpos);
-
-                        if (iblockstate1.getBlock() instanceof SpreadableSnowyDirtBlock && worldIn.getNeighborAwareLightSubtracted(blockpos.up(),4) >= 4)
-                        {
-                            worldIn.setBlockState(blockpos, ModBlocks.ornamentalGrass.get().getDefaultState());
-                        }
+            while(true) {
+                if (j >= i / 16) {
+                    BlockState blockstate2 = worldIn.getBlockState(blockpos1);
+                    if (blockstate2.getBlock() == blockstate.getBlock() && rand.nextInt(10) == 0) {
+                        ((IGrowable)blockstate.getBlock()).grow(worldIn, rand, blockpos1, blockstate2);
                     }
+
+                    if (!blockstate2.isAir()) {
+                        break;
+                    }
+
+                    BlockState blockstate1;
+                    if (rand.nextInt(8) == 0) {
+                        List<ConfiguredFeature<?>> list = worldIn.getBiome(blockpos1).getFlowers();
+                        if (list.isEmpty()) {
+                            break;
+                        }
+
+                        blockstate1 = ((FlowersFeature)((DecoratedFeatureConfig)(list.get(0)).config).feature.feature).getRandomFlower(rand, blockpos1);
+                    } else {
+                        blockstate1 = blockstate;
+                    }
+
+                    if (blockstate1.isValidPosition(worldIn, blockpos1)) {
+                        worldIn.setBlockState(blockpos1, blockstate1, 3);
+                    }
+                    break;
                 }
+
+                blockpos1 = blockpos1.add(rand.nextInt(3) - 1, (rand.nextInt(3) - 1) * rand.nextInt(3) / 2, rand.nextInt(3) - 1);
+                if (worldIn.getBlockState(blockpos1.down()).getBlock() != this || worldIn.getBlockState(blockpos1).func_224756_o(worldIn, blockpos1)) {
+                    break;
+                }
+
+                ++j;
             }
         }
+
+    }
+
+    public boolean isSolid(BlockState state) {
+        return true;
     }
 
     @Override
     public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction facing, IPlantable plantable) {
         return true;
     }
+
+
+
 }
 
 
