@@ -40,7 +40,7 @@ public class BiomeInit {
     public static final RegistryObject<Biome> OASISSHORE_BIOME = BIOMES
             .register("oasisshore_biome",
                     () -> new BiomeOasisShore(
-                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.0025F).temperature(0.8F)
+                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.025F).temperature(0.8F)
                                     .waterColor(4159204).waterFogColor(329011)
                                     .surfaceBuilder(
                                             new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
@@ -50,7 +50,7 @@ public class BiomeInit {
                                                     new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState())))
-                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.125f).parent(Biomes.WARM_OCEAN.getParent()))); //Experimental
+                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.0f).parent(Biomes.WARM_OCEAN.getParent()))); //Experimental
 
 
     public static void registerBiomes() {
