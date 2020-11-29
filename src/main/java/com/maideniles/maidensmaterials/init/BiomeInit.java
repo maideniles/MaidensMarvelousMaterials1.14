@@ -40,7 +40,7 @@ public class BiomeInit {
     public static final RegistryObject<Biome> OASISSHORE_BIOME = BIOMES
             .register("oasisshore_biome",
                     () -> new BiomeOasisShore(
-                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.0025F).temperature(0.8F)
+                            new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(0.1F).temperature(0.8F)
                                     .waterColor(4159204).waterFogColor(329011)
                                     .surfaceBuilder(
                                             new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(
