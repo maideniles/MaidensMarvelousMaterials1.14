@@ -23,6 +23,9 @@ public class MaidensEventHandler {
     private static final Random rand = new Random();
 
     //ADD EARTHEN ESSENCE DROPS TO ORE AND WOOD BLOCKS//  //this is now useless in 1.14  :(  //
+
+
+
     @SubscribeEvent
     public static void onBlockBreakEvent3(BlockEvent.BreakEvent event) {
         PlayerEntity player = event.getPlayer();
