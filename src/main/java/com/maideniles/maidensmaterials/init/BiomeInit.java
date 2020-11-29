@@ -50,7 +50,7 @@ public class BiomeInit {
                                                     new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState(),
                                                             Blocks.SAND.getDefaultState())))
-                                    .category(Biome.Category.OCEAN).downfall(0.4f).depth(0.0f).parent(Biomes.WARM_OCEAN.getParent()))); //Experimental
+                                    .category(Biome.Category.BEACH).downfall(0.4f).depth(0.0f).parent(Biomes.WARM_OCEAN.getParent()))); //Experimental
 
 
     public static void registerBiomes() {
@@ -61,7 +61,7 @@ public class BiomeInit {
 
     private static void registerBiome(Biome biome, Type... types) {
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(ORNAMENTALFOREST_BIOME.get(), 100));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(OASISSHORE_BIOME.get(), 100));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(OASISSHORE_BIOME.get(), 10));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }
