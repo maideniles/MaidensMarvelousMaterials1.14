@@ -36,5 +36,6 @@ public class BiomeOasisShore extends Biome {
 
         DefaultBiomeFeatures.addDesertFeatures(this);
         DefaultBiomeFeatures.addKelp(this);
+        DefaultBiomeFeatures.addLakes(this);
     }
 }
