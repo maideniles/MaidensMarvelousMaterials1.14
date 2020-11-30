@@ -1,5 +1,6 @@
 package com.maideniles.maidensmaterials.world.biomes;
 
+import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.mojang.datafixers.Dynamic;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -25,15 +26,15 @@ public class BiomeOasisShoreSurfaceBuilder extends SurfaceBuilder<SurfaceBuilder
         if (i == 0) {
             SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock,
                     defaultFluid, seaLevel, seed,
-                    new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(),
-                            Blocks.DIRT.getDefaultState(), Blocks.SANDSTONE.getDefaultState()));
+                    new SurfaceBuilderConfig(ModBlocks.sparklingSand.get().getDefaultState(),
+                            Blocks.SAND.getDefaultState(), Blocks.SANDSTONE.getDefaultState()));
         } else {
             SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock,
                     defaultFluid, seaLevel, seed,
                     new SurfaceBuilderConfig(
-                            i == 1 ? Blocks.SAND.getDefaultState()
-                                    : Blocks.GRASS_BLOCK.getDefaultState(),
-                            Blocks.SAND.getDefaultState(), Blocks.GRASS_BLOCK.getDefaultState()));
+                            i == 1 ? ModBlocks.sparklingSand.get().getDefaultState()
+                                    : ModBlocks.sparklingSand.get().getDefaultState(),
+                            Blocks.SAND.getDefaultState(), Blocks.SANDSTONE.getDefaultState()));
         }
     }
 }

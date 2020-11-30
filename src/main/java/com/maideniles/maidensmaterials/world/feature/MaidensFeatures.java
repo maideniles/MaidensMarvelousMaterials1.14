@@ -5,6 +5,9 @@ import com.maideniles.maidensmaterials.block.OrnamentalMushroomFeature;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import com.maideniles.maidensmaterials.world.feature.tree.MaidensTreeFeature;
 import com.maideniles.maidensmaterials.world.feature.tree.MaidensTreeFeatureVines;
+
+import com.maideniles.maidensmaterials.world.feature.tree.PalmTreeFeature1;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.*;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -40,6 +43,11 @@ public abstract class MaidensFeatures<FC extends IFeatureConfig> extends net.min
     public static final Feature<NoFeatureConfig> APPLE_TREE = register("apple_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.appleLeaves.get().getDefaultState()));
 
     public static final Feature<NoFeatureConfig> GRAPEFRUIT_TREE = register("grapefruit_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> PALM_1 = register("palm_tree_1",new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.palmLog.get().getDefaultState(), ModBlocks.palmLeaves.get().getDefaultState()));
+
+    //public static final Feature<NoFeatureConfig> PALM_2 = register("palm_tree_2",new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, false, Blocks.JUNGLE_LOG.getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
+
 
 
     private static <C extends IFeatureConfig, F extends Feature<C>> F register(String key, F value)

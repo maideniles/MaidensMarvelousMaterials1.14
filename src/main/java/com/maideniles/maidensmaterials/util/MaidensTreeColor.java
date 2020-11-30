@@ -12,6 +12,7 @@ public enum MaidensTreeColor {
     WHITE,  //SILVERBELL
     CEDAR,  //CEDAR
     APPLE, //APPLE
-    GRAPEFRUIT //GRAPEFRUIT
+    GRAPEFRUIT, //GRAPEFRUIT
+    PALM, //PALM
 
 }

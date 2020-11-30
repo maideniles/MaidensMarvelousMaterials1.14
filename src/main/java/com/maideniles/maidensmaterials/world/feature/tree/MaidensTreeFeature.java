@@ -161,7 +161,8 @@ public class MaidensTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
     protected static boolean isDirtOrGrassBlock(IWorldGenerationBaseReader worldIn, BlockPos pos) {
         return worldIn.hasBlockState(pos, (p_214582_0_) -> {
             Block block = p_214582_0_.getBlock();
-            return Block.isDirt(block) || block == Blocks.GRASS_BLOCK || block == ModBlocks.ornamentalGrass.get() || block == Blocks.SAND;
+            return Block.isDirt(block) || block == Blocks.GRASS_BLOCK
+                    || block == ModBlocks.ornamentalGrass.get() || block == ModBlocks.sparklingSand.get();
         });
     }
 
@@ -176,7 +177,7 @@ public class MaidensTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
         return worldIn.hasBlockState(pos, (p_214586_0_) -> {
             Block block = p_214586_0_.getBlock();
             return Block.isDirt(block) || block == Blocks.GRASS_BLOCK || block == Blocks.FARMLAND
-                    || block == ModBlocks.ornamentalGrass.get() || block == Blocks.SAND;
+                    || block == ModBlocks.ornamentalGrass.get() || block == ModBlocks.sparklingSand.get();
         });
     }
 

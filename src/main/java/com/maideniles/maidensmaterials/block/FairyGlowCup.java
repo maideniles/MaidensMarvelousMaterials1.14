@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class FairyGlowCup extends HorizontalBlock implements IGrowable {
+public class FairyGlowCup extends CocoaBlock implements IGrowable {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_2;
 
     protected static final VoxelShape[] GLOW_CUP_EAST_AABB = new VoxelShape[]{Block.makeCuboidShape(0.6875D, 0.4375D, 0.375D, 0.9375D, 0.75D, 0.625D),
@@ -136,5 +136,10 @@ public class FairyGlowCup extends HorizontalBlock implements IGrowable {
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, AGE);
+    }
+
+    @Override
+    public boolean ticksRandomly(BlockState state) {
+        return true;
     }
 }

@@ -75,6 +75,10 @@ public class MaidensTrees extends Tree {
                     new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
 
 
+            case PALM:  return  (random.nextInt(6) == 0 ? (new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.palmLog.get().getDefaultState(), ModBlocks.palmLeaves.get().getDefaultState())):
+                    new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.palmLog.get().getDefaultState(), ModBlocks.palmLeaves.get().getDefaultState()));
+
+
         }
 
         return getTreeFeature(random);
