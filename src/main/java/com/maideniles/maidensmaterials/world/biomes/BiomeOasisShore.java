@@ -35,7 +35,6 @@ public class BiomeOasisShore extends Biome {
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(MaidensFeatures.PALM_1, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(0, 0.1F, 1)));
 
         DefaultBiomeFeatures.addDesertFeatures(this);
-        DefaultBiomeFeatures.addKelp(this);
         DefaultBiomeFeatures.addLakes(this);
     }
 }
