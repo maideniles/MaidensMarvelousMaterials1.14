@@ -19,7 +19,7 @@ public class Config {
 
     static
     {
-        OreGenConfig.init(SERVER_BUILDER, CLIENT_BUILDER);
+        ConfigBuilder.init(SERVER_BUILDER, CLIENT_BUILDER);
 
         SERVER = SERVER_BUILDER.build();
         CLIENT = CLIENT_BUILDER.build();

@@ -1,6 +1,6 @@
 package com.maideniles.maidensmaterials.world.gen;
 
-import com.maideniles.maidensmaterials.config.OreGenConfig;
+import com.maideniles.maidensmaterials.config.ConfigBuilder;
 import com.maideniles.maidensmaterials.init.ModBlocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -13,34 +13,34 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class OreGen {
 
     public static void setupOreGeneration() {
-        if(OreGenConfig.generate_overworld.get()) {
+        if(ConfigBuilder.generate_overworld.get()) {
             for (Biome biome : ForgeRegistries.BIOMES) {
 
                 //Amethyst
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.amethystOre.get().getDefaultState(), OreGenConfig.tutorial_chance.get()), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.amethystOre.get().getDefaultState(), ConfigBuilder.amethyst_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.amethystOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.amethystOreNether.get().getDefaultState(), ConfigBuilder.amethyst_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Aventurine
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.aventurineOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.aventurineOre.get().getDefaultState(), ConfigBuilder.aventurine_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.aventurineOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.aventurineOreNether.get().getDefaultState(), ConfigBuilder.aventurine_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Carnelian
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.carnelianOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.carnelianOre.get().getDefaultState(), ConfigBuilder.carnelian_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.carnelianOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.carnelianOreNether.get().getDefaultState(), ConfigBuilder.carnelian_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Chalcopyrite
