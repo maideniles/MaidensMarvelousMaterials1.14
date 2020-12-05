@@ -45,83 +45,83 @@ public class OreGen {
 
                 //Chalcopyrite
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.chalcopyriteOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.chalcopyriteOre.get().getDefaultState(), ConfigBuilder.chalcopyrite_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.chalcopyriteOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.chalcopyriteOreNether.get().getDefaultState(), ConfigBuilder.chalcopyrite_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Citrine
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.citrineOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.citrineOre.get().getDefaultState(), ConfigBuilder.citrine_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.citrineOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.citrineOreNether.get().getDefaultState(), ConfigBuilder.citrine_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Jade
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.jadeOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.jadeOre.get().getDefaultState(), ConfigBuilder.jade_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.jadeOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.jadeOreNether.get().getDefaultState(), ConfigBuilder.jade_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Jasper
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.jasperOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.jasperOre.get().getDefaultState(), ConfigBuilder.jasper_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.jasperOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.jasperOreNether.get().getDefaultState(), ConfigBuilder.jasper_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Labradorite
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.labradoriteOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.labradoriteOre.get().getDefaultState(), ConfigBuilder.labradorite_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.labradoriteOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.labradoriteOreNether.get().getDefaultState(), ConfigBuilder.labradorite_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Mica
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.micaOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.micaOre.get().getDefaultState(), ConfigBuilder.mica_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.micaOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.micaOreNether.get().getDefaultState(), ConfigBuilder.mica_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Moonstone
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.moonstoneOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.moonstoneOre.get().getDefaultState(), ConfigBuilder.moonstone_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.moonstoneOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.moonstoneOreNether.get().getDefaultState(), ConfigBuilder.moonstone_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //RoseQuartz
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.roseQuartzOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.roseQuartzOre.get().getDefaultState(), ConfigBuilder.rosequartz_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.roseQuartzOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.roseQuartzOreNether.get().getDefaultState(), ConfigBuilder.rosequartz_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 //Sodalite
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.sodaliteOre.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.sodaliteOre.get().getDefaultState(), ConfigBuilder.sodalite_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(
-                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.sodaliteOreNether.get().getDefaultState(), 17), Placement.COUNT_RANGE,
+                                OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.sodaliteOreNether.get().getDefaultState(), ConfigBuilder.sodalite_nether_chance.get()), Placement.COUNT_RANGE,
                         new CountRangeConfig(40, 32, 0, 196)));
 
             }
