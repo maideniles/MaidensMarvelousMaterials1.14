@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.config.ConfigBuilder;
 import com.maideniles.maidensmaterials.world.biomes.BiomeOasisShore;
 import com.maideniles.maidensmaterials.world.biomes.BiomeOasisShoreSurfaceBuilder;
 import com.maideniles.maidensmaterials.world.biomes.BiomeOrnamentalForest;
@@ -60,8 +61,8 @@ public class BiomeInit {
     }
 
     private static void registerBiome(Biome biome, Type... types) {
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(ORNAMENTALFOREST_BIOME.get(), 30));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(OASISSHORE_BIOME.get(), 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(ORNAMENTALFOREST_BIOME.get(), ConfigBuilder.ornamental_forest_biome_chances.get()));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(OASISSHORE_BIOME.get(), ConfigBuilder.oasis_shore_biome_chances.get()));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }

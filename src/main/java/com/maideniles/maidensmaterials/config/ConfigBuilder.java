@@ -12,6 +12,9 @@ public class ConfigBuilder {
     public static ForgeConfigSpec.IntValue carnelian_nether_chance;
     public static ForgeConfigSpec.BooleanValue generate_overworld;
 
+    public static ForgeConfigSpec.IntValue ornamental_forest_biome_chances;
+    public static ForgeConfigSpec.IntValue oasis_shore_biome_chances;
+
     public static void init(ForgeConfigSpec.Builder server, ForgeConfigSpec.Builder client)
     {
         server.comment("Oregen Config");
@@ -43,6 +46,16 @@ public class ConfigBuilder {
         carnelian_nether_chance = server
                 .comment("Maximum number of ore veins of the carnelian nether ore that can spawn in one chunk.")
                 .defineInRange("oregen.carnelian_nether_chance", 17, 1, 1000000);
+
+        server.comment("Biome Config");
+
+        ornamental_forest_biome_chances = server
+                .comment("Ornamental forest biome chance. Range  1 ~ 100")
+                .defineInRange("biome.ornamental_forest_biome_chances", 5, 1, 100);
+
+        oasis_shore_biome_chances = server
+                .comment("Oasis Shore biome chance. Range  1 ~ 100")
+                .defineInRange("biome.oasis_shore_biome_chances", 5, 1, 100);
 
     }
 }
