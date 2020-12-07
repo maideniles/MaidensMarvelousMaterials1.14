@@ -27,6 +27,6 @@ public class ModItemGroups {
 
     }
 
-    public static final ItemGroup MAIDENS_BLOCKS_GROUP = new ModItemGroup(MarvelousMaterials.MODID, () -> new ItemStack(ModBlocks.dogwoodLeaves.get()));
-    public static final ItemGroup MAIDENS_ITEMS_GROUP = new ModItemGroup(MarvelousMaterials.MODID, () -> new ItemStack(ModItems.DOGWOOD_BLOSSOMS.get()));
+    public static final ItemGroup MAIDENS_BLOCKS_GROUP = new ModItemGroup("maidens_blocks_tab", () -> new ItemStack(ModBlocks.dogwoodLeaves.get()));
+    public static final ItemGroup MAIDENS_ITEMS_GROUP = new ModItemGroup("maidens_items_tab", () -> new ItemStack(ModItems.DOGWOOD_BLOSSOMS.get()));
 }
