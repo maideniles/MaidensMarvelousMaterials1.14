@@ -1,5 +1,6 @@
 package com.maideniles.maidensmaterials.block.tree;
 
+import com.maideniles.maidensmaterials.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -107,7 +108,7 @@ public class CoconutNut extends CocoaBlock {
 
     @Override
     public ItemStack getItem(IBlockReader worldIn, BlockPos pos, BlockState state) {
-        return (new ItemStack(Items.GLOWSTONE_DUST));
+        return (new ItemStack(ModItems.COCONUT.get()));
     }
 
 

@@ -518,9 +518,32 @@ public class ModItems {
 	public static final RegistryObject<Item>STAIN_BROWN = ITEMS.register("stain_brown",
 			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
+//FRUITS//
 	public static final RegistryObject<Item>GRAPEFRUIT = ITEMS.register("grapefruit",
 			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
+	public static final RegistryObject<Item>ORANGE = ITEMS.register("orange",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
+	public static final RegistryObject<Item>LEMON = ITEMS.register("lemon",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>LIME = ITEMS.register("lime",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>PEACH = ITEMS.register("peach",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>PEAR = ITEMS.register("pear",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>PLUM = ITEMS.register("plum",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>CHERRIES = ITEMS.register("cherries",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
+	public static final RegistryObject<Item>COCONUT = ITEMS.register("coconut",
+			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
 }

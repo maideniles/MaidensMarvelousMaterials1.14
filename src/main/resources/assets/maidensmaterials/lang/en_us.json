@@ -200,17 +200,29 @@
 	"item.maidensmaterials.clay_vase_gray": "Gray Clay Vase (Unfired)",
 	"item.maidensmaterials.clay_vase_black": "Black Clay Vase (Unfired)",
 	"item.maidensmaterials.clay_vase_brown": "Brown Clay Vase (Unfired)",
+	
+	"item.maidensmaterials.orange": "Orange",
+	"item.maidensmaterials.grapefruit": "Grapefruit",
+	"item.maidensmaterials.lemon": "Lemon",
+	"item.maidensmaterials.lime": "Lime",
+	"item.maidensmaterials.peach": "Peach",
+	"item.maidensmaterials.pear": "Pear",
+	"item.maidensmaterials.plum": "Plum",
+	"item.maidensmaterials.cherries": "Cherries",
+	"item.maidensmaterials.coconut": "Coconut",
 
 
 	"tile.maidensmaterials.ornamental_path": "Ornamental Grass Path",
 	"tile.maidensmaterials.ornamental_grass_normal": "Ornamental Grass",
 	"tile.maidensmaterials.ornamental_grass": "Ornamental Grass with Flowers",
-	"tile.maidensmaterials.ornamental_dirt": "Ornamental Dirt",
+	"tile.maidensmaterials.ornamental_mushroom": "Ornamental Mushrooms",
 	"tile.maidensmaterials.fairy_glow_cup": "Fairy Glow Cup",
+	"tile.maidensmaterials.coconutnut": "Coconuts",
 	"tile.maidensmaterials.vine_tie": "Vine Tie",
 	"tile.maidensmaterials.flower_grass": "Vanishing Flowers",
 	"tile.maidensmaterials.multi_cobble": "Mixed Cobblestone",
 	"tile.maidensmaterials.multi_brick.json": "Mixed Brick",
+
 
 	"tile.maidensmaterials.floral_block": "Floral Essence Block",
 	"tile.maidensmaterials.earthen_block": "Earthen Essence Block",
@@ -816,11 +828,20 @@
 	"tile.maidensmaterials.crabapple_leaves": "Crabapple Leaves",
 	"tile.maidensmaterials.dogwood_leaves": "Dogwood Leaves",
 	"tile.maidensmaterials.cedar_leaves": "Cedar Leaves",
+	
+	"tile.maidensmaterials.orange_leaves": "Orange Leaves",
+	"tile.maidensmaterials.lemon_leaves": "Lemon Leaves",
+	"tile.maidensmaterials.lime_leaves": "Lime Leaves",
+	"tile.maidensmaterials.grapefruit_leaves": "Grapefruit Leaves",
+	"tile.maidensmaterials.peach_leaves": "Peach Leaves",
+	"tile.maidensmaterials.pear_leaves": "Pear Leaves",
+	"tile.maidensmaterials.plum_leaves": "Plum Leaves",
+	"tile.maidensmaterials.apple_leaves": "Apple Leaves",
+	"tile.maidensmaterials.cherry_leaves": "Cherry Leaves",
 
 	"tile.maidensmaterials.palm_leaves": "Palm Leaves",
 
-	"tile.maidensmaterials.apple_leaves": "Apple Leaves",
-	"tile.maidensmaterials.grapefruit_leaves": "Grapefruit Leaves",
+	
 
 	"tile.maidensmaterials.paulownia_sapling": "Paulownia Sapling",
 	"tile.maidensmaterials.poinciana_sapling": "Poinciana Sapling",
@@ -837,17 +858,15 @@
 
 	"tile.maidensmaterials.apple_sapling": "Apple Sapling",
 	"tile.maidensmaterials.grapefruit_sapling": "Grapefruit Sapling",
+	"tile.maidensmaterials.orange_sapling": "Orange Sapling",
+	"tile.maidensmaterials.lemon_sapling": "Lemon Sapling",
+	"tile.maidensmaterials.lime_sapling": "Lime Sapling",
+	"tile.maidensmaterials.peach_sapling": "Peach Sapling",
+	"tile.maidensmaterials.pear_sapling": "Pear Sapling",
+	"tile.maidensmaterials.plum_sapling": "Plum Sapling",
+	"tile.maidensmaterials.cherry_sapling": "Cherry Sapling",
 
-	"tile.maidensmaterials.paulownia_sapling_vines": "Paulownia Sapling with Vines",
-	"tile.maidensmaterials.poinciana_sapling_vines": "Poinciana Sapling with Vines",
-	"tile.maidensmaterials.jade_sapling_vines": "Jade Sapling with Vines",
-	"tile.maidensmaterials.jacaranda_sapling_vines": "Jacaranda Sapling with Vines",
-	"tile.maidensmaterials.wisteria_sapling_vines": "Wisteria Sapling with Vines",
-	"tile.maidensmaterials.silverbell_sapling_vines": "Carolina Silverbell Sapling with Vines",
-	"tile.maidensmaterials.crabapple_sapling_vines": "Crabapple Sapling with Vines",
-	"tile.maidensmaterials.dogwood_sapling_vines": "Dogwood Sapling with Vines",
-	"tile.maidensmaterials.laburnum_sapling_vines": "Laburnum Sapling with Vines",
-
+	
 	"tile.maidensmaterials.jacaranda_vine": "Jacaranda Vines",
 	"tile.maidensmaterials.poinciana_vine": "Poinciana Vines",
 	"tile.maidensmaterials.jade_vine": "Jade Vines",

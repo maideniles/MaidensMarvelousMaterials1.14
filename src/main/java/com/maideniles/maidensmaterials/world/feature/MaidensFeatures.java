@@ -44,6 +44,20 @@ public abstract class MaidensFeatures<FC extends IFeatureConfig> extends net.min
 
     public static final Feature<NoFeatureConfig> GRAPEFRUIT_TREE = register("grapefruit_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
 
+    public static final Feature<NoFeatureConfig> ORANGE_FRUIT_TREE = register("orange_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.orangeLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> LEMON_TREE = register("lemon_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.lemonLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> LIME_TREE = register("lime_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.limeLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> PEACH_FRUIT_TREE = register("peach_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.peachLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> PEAR_TREE = register("pear_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.pearLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> PLUM_TREE = register("plum_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.plumLeaves.get().getDefaultState()));
+
+    public static final Feature<NoFeatureConfig> CHERRY_TREE = register("cherry_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.cherryLeaves.get().getDefaultState()));
+
     public static final Feature<NoFeatureConfig> PALM_1 = register("palm_tree_1",new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.palmLog.get().getDefaultState(), ModBlocks.palmLeaves.get().getDefaultState()));
 
     //public static final Feature<NoFeatureConfig> PALM_2 = register("palm_tree_2",new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, false, Blocks.JUNGLE_LOG.getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));

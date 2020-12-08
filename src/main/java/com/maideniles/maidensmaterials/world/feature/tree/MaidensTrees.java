@@ -74,6 +74,26 @@ public class MaidensTrees extends Tree {
             case GRAPEFRUIT:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState())):
                     new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.grapefruitLeaves.get().getDefaultState()));
 
+            case ORANGE_FRUIT:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.orangeLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.orangeLeaves.get().getDefaultState()));
+
+            case LEMON:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.lemonLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.lemonLeaves.get().getDefaultState()));
+
+            case LIME:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.limeLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.limeLeaves.get().getDefaultState()));
+
+            case PEACH:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.peachLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.peachLeaves.get().getDefaultState()));
+
+            case PEAR:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.pearLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.pearLeaves.get().getDefaultState()));
+
+            case PLUM:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.plumLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.plumLeaves.get().getDefaultState()));
+
+            case CHERRY:  return  (random.nextInt(6) == 0 ? (new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.cherryLeaves.get().getDefaultState())):
+                    new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.cherryLeaves.get().getDefaultState()));
 
             case PALM:  return  (random.nextInt(6) == 0 ? (new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.palmLog.get().getDefaultState(), ModBlocks.palmLeaves.get().getDefaultState())):
                     new PalmTreeFeature1(NoFeatureConfig::deserialize, true, 4, true, ModBlocks.palmLog.get().getDefaultState(), ModBlocks.palmLeaves.get().getDefaultState()));

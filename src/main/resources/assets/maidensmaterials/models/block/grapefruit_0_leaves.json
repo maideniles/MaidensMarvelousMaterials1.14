@@ -2,8 +2,8 @@
     "parent": "block/block",
     "textures": {
         "0": "maidensmaterials:block/tree_grapefruit_none",
-        "1": "maidensmaterials:block/leaves3",
-		"particle": "maidensmaterials:block/leaves3"
+        "1": "maidensmaterials:block/leaves4",
+		"particle": "maidensmaterials:block/leaves4"
     },
     "elements": [
         {
