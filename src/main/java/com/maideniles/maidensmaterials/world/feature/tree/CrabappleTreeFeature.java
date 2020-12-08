@@ -85,7 +85,7 @@ public class CrabappleTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
                             int k1 = j1 - position.getZ();
                             if (Math.abs(l3) != i3 || Math.abs(k1) != i3 || rand.nextInt(2) != 0 && k2 != 0) {
                                 BlockPos blockpos = new BlockPos(k3, l1, j1);
-                                if (isAirOrLeaves(worldIn, blockpos) || func_214576_j(worldIn, blockpos)) {
+                                if (isAirOrLeaves(worldIn, blockpos) || isTallPlants(worldIn, blockpos)) {
                                     this.setLogState(changedBlocks, worldIn, blockpos, LEAF, p_208519_5_);
                                 }
                             }

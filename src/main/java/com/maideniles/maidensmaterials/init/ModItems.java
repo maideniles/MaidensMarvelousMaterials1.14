@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.item.GuideBookItem;
 import com.maideniles.maidensmaterials.item.MortarNPestleItem;
 import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
@@ -249,7 +250,7 @@ public class ModItems {
 
 
 	public static final RegistryObject<Item>GUIDE_BOOK = ITEMS.register("guide_book",
-			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+			() -> new GuideBookItem(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(1)));
 
 
 
@@ -545,5 +546,6 @@ public class ModItems {
 
 	public static final RegistryObject<Item>COCONUT = ITEMS.register("coconut",
 			() -> new Item(new Item.Properties().food(Foods.APPLE).group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+
 
 }
