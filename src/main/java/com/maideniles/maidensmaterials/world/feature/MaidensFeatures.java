@@ -50,7 +50,7 @@ public abstract class MaidensFeatures<FC extends IFeatureConfig> extends net.min
 
     public static final Feature<NoFeatureConfig> LIME_TREE = register("lime_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.limeLeaves.get().getDefaultState()));
 
-    public static final Feature<NoFeatureConfig> PEACH_FRUIT_TREE = register("peach_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.peachLeaves.get().getDefaultState()));
+    public static final Feature<NoFeatureConfig> PEACH_TREE = register("peach_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.peachLeaves.get().getDefaultState()));
 
     public static final Feature<NoFeatureConfig> PEAR_TREE = register("pear_tree",new MaidensTreeFeature(NoFeatureConfig::deserialize, true, 4, false, ModBlocks.cedarLog.get().getDefaultState(), ModBlocks.pearLeaves.get().getDefaultState()));
 
