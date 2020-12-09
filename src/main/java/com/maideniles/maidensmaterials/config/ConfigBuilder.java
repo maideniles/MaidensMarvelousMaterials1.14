@@ -32,6 +32,7 @@ public class ConfigBuilder {
 
     public static ForgeConfigSpec.IntValue ornamental_forest_biome_chances;
     public static ForgeConfigSpec.IntValue oasis_shore_biome_chances;
+    public static ForgeConfigSpec.IntValue ornamental_orchard_biome_chances;
 
     public static void init(ForgeConfigSpec.Builder server, ForgeConfigSpec.Builder client)
     {
@@ -148,6 +149,10 @@ public class ConfigBuilder {
         oasis_shore_biome_chances = server
                 .comment("Oasis Shore biome chance. Range  1 ~ 100")
                 .defineInRange("biome.oasis_shore_biome_chances", 5, 1, 100);
+
+        ornamental_orchard_biome_chances = server
+                .comment("Ornamental Orchard biome chance. Range  1 ~ 100")
+                .defineInRange("biome.ornamental_orchard_biome_chances", 2, 1, 100);
 
     }
 }
