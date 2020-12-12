@@ -8,9 +8,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.carver.WorldCarver;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.LakesConfig;
+import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.placement.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -19,6 +22,10 @@ public class BiomeOrnamentalOrchard extends Biome{
 
     public BiomeOrnamentalOrchard(Builder biomeBuilder) {
         super(biomeBuilder);
+
+        this.addStructure(Feature.VILLAGE, new VillageConfig("village/plains/town_centers", 8));
+        this.addCarver(GenerationStage.Carving.AIR,
+                Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715F)));
 
         this.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, Biome.createDecoratedFeature(Feature.LAKE, new LakesConfig(Blocks.WATER.getDefaultState()), Placement.WATER_LAKE, new LakeChanceConfig(12)));
 
