@@ -1,6 +1,7 @@
 package com.maideniles.maidensmaterials.init;
 
 import com.maideniles.maidensmaterials.MarvelousMaterials;
+import com.maideniles.maidensmaterials.item.GroutItem;
 import com.maideniles.maidensmaterials.item.GuideBookItem;
 import com.maideniles.maidensmaterials.item.MortarNPestleItem;
 import net.minecraft.item.Foods;
@@ -27,7 +28,7 @@ public class ModItems {
 			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
 	public static final RegistryObject<Item> GROUT = ITEMS.register("grout",
-			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
+			() -> new GroutItem(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
 
 	public static final RegistryObject<Item> DARK_IRON_MIX = ITEMS.register("dark_iron_mix",
 			() -> new Item(new Item.Properties().group(ModItemGroups.MAIDENS_ITEMS_GROUP).maxStackSize(64)));
