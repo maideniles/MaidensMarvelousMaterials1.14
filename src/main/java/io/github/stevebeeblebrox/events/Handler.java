@@ -1,4 +1,4 @@
-package stevebeeblebrox.events;
+package io.github.stevebeeblebrox.events;
 
 import java.io.File;
 import java.io.FileNotFoundException;
