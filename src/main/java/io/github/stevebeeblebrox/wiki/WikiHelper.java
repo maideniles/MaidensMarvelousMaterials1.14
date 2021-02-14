@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package io.github.stevebeeblebrox;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
