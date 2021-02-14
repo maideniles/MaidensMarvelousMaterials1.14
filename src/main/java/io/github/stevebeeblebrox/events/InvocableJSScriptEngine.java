@@ -1,4 +1,4 @@
-package stevebeeblebrox.events;
+package io.github.stevebeeblebrox.events;
 
 import java.io.Reader;
 
@@ -21,18 +21,18 @@ public class InvocableJSScriptEngine implements ScriptEngine, Invocable {
 	private Invocable invocable;
 	
 	public static final String ARGV = "javax.script.argv";
-    public static final String FILENAME = "javax.script.filename";
-    public static final String ENGINE = "javax.script.engine";
-    public static final String ENGINE_VERSION = "javax.script.engine_version";
-    public static final String NAME = "javax.script.name";
-    public static final String LANGUAGE = "javax.script.language";
-    public static final String LANGUAGE_VERSION ="javax.script.language_version";
+    	public static final String FILENAME = "javax.script.filename";
+    	public static final String ENGINE = "javax.script.engine";
+    	public static final String ENGINE_VERSION = "javax.script.engine_version";
+    	public static final String NAME = "javax.script.name";
+    	public static final String LANGUAGE = "javax.script.language";
+    	public static final String LANGUAGE_VERSION ="javax.script.language_version";
 	//#end Vars
     
-    //# start Constructors
-    /**
-     * Creates an InvocableJSScriptEngine on the default class loader (not always the current one)
-     */
+    	//# start Constructors
+    	/**
+     	 * Creates an InvocableJSScriptEngine on the default class loader (not always the current one)
+     	 */
 	public InvocableJSScriptEngine() {
 		String name = "JavaScript";
 		engine = new ScriptEngineManager().getEngineByName(name);
