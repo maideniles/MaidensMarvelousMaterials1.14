@@ -11,7 +11,7 @@
  * To get the event handler class, use the following script
  * <br>
  * <br>
- * &emsp;<i>var Handler = Java.type("stevebeeblebrox.events.Handler");</i>
+ * &emsp;<i>var Handler = Java.type("io.github.stevebeeblebrox.events.Handler");</i>
  * <br>
  * <br>
  * To register an event listener for the function <i>methodName</i>, use the following
@@ -29,4 +29,4 @@
  * @see {@link https://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/}
  * @see {@link https://web.archive.org/web/20200202011708/http://www.n-k.de:80/riding-the-nashorn/}
  */
-package stevebeeblebrox.events;
+package io.github.stevebeeblebrox.events;
