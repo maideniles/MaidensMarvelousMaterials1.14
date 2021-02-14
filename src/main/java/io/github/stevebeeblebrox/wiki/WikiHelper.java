@@ -1,4 +1,4 @@
-package io.github.stevebeeblebrox;
+package io.github.stevebeeblebrox.wiki;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
