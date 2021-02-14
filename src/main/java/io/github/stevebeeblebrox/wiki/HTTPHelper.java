@@ -1,4 +1,4 @@
-package io.github.stevebeeblebrox;
+package io.github.stevebeeblebrox.wiki;
 
 import java.io.BufferedReader;
 import java.io.IOException;
